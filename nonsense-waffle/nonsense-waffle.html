@@ -1,0 +1,36 @@
+<head>
+  <title>Nonsense Waffle</title>
+</head>
+
+<body>
+  <h1>Nonsense Waffle Admin</h1>
+
+<hr/>
+  {{> adminPage}}
+
+</body>
+
+<template name="adminPage">
+  <form>
+
+    New word: <input type="text" id="txtNewWord" value="{{sNewWord}}"><br><br>
+    <input type="radio" name="optWordType" value="adjective">Adjective<br>
+    <input type="radio" name="optWordType" value="noun">Noun<br>
+    <input type="radio" name="optWordType" value="verb">Verb<br>
+    <input type="radio" name="optWordType" value="person">Person<br>
+    <input type="radio" name="optWordType" value="naughty">Naughty<br>
+    <br>
+    <textarea id="txtWordDescription" rows="4" cols="50" placeholder="funny word description">{{sDescription}}</textarea>
+    <br><br>
+
+    <button id="btnSubmitWord">submit new word</button>
+    <br>
+  </form>
+
+  {{#each words}}
+
+  {{sNewWord}} :: {{description}} |||| date: {{dateAdded}} and type: {{sType}}
+
+  {{/each}}
+
+</template>
