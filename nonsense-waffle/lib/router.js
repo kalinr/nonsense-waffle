@@ -1,8 +1,6 @@
-
 Router.configure({
   layoutTemplate: 'main'
 });
-
 
 Router.map( function () {
   this.route('/admin');
@@ -23,8 +21,7 @@ Router.map( function () {
     }
   });
 
+  //TODO: show something on a simple /view url without an entry id
   //this.route('/view');
-
-
 });
 

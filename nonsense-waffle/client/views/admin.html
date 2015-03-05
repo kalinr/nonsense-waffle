@@ -1,24 +1,21 @@
 <template name="admin">
-    <form>
+  <form>
 
-        New word: <input type="text" id="txtNewWord" value="{{sNewWord}}"><br><br>
-        <input type="radio" name="optWordType" value="adjective">Adjective<br>
-        <input type="radio" name="optWordType" value="noun">Noun<br>
-        <input type="radio" name="optWordType" value="verb">Verb<br>
-        <input type="radio" name="optWordType" value="person">Person<br>
-        <input type="radio" name="optWordType" value="naughty">Naughty<br>
-        <br>
-        <textarea id="txtWordDescription" rows="4" cols="50" placeholder="funny word description">{{sDescription}}</textarea>
-        <br><br>
+    New word: <input type="text" id="txtNewWord" value="{{sNewWord}}"><br><br>
+    <input type="radio" name="optWordType" value="adjective">Adjective<br>
+    <input type="radio" name="optWordType" value="noun">Noun<br>
+    <input type="radio" name="optWordType" value="verb">Verb<br>
+    <input type="radio" name="optWordType" value="person">Person<br>
+    <input type="radio" name="optWordType" value="naughty">Naughty<br>
+    <br>
+    <textarea id="txtWordDescription" rows="4" cols="50" placeholder="funny word description">{{sDescription}}</textarea>
+    <br><br>
 
-        <button id="btnSubmitWord">submit new word</button>
-        <br>
-    </form>
+    <button id="btnSubmitWord">submit new word</button>
+    <br>
+  </form>
 
-    {{#each words}}
-
-    {{_id}} :: {{description}} |||| date: {{dateAdded}} and type: {{type}}
-
-    {{/each}}
-
+  {{#each words}}
+  {{_id}} :: {{description}} |||| date: {{dateAdded}} and type: {{type}}
+  {{/each}}
 </template>

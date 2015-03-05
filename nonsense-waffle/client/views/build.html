@@ -1,4 +1,29 @@
 <template name="build">
-    <p> this is where the user builds their entries </p>
 
+  <div id="wordContainer">
+    {{#each words}}
+      <div class="wordCard">
+        <div class="wordCardTitle" >{{_id}}</div> {{description}} <br> {{type}}
+        <br>
+        <button class="btnAddWord alignBottom" id="btnAddWord_{{_id}}">Add</button>
+      </div>
+    {{/each}}
+
+    <button id="btnDrawCard">Draw Card</button>
+
+    <br><br>
+  </div>
+  <div  id="buildForm">
+    <form>
+      title: <input type="text" id="txtEntryTitle" value="{{sTitle}}"><button id="btnClearTitle">clear</button>
+
+      <br><br>
+      <br>
+      <textarea id="txtEntryContent" rows="4" cols="50" placeholder="type your crap here">{{sDescription}}</textarea>
+      <br><br>
+
+      <button id="btnSubmitEntry">submit entry</button>
+      <br>
+    </form>
+  </div>
 </template>
