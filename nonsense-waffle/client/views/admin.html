@@ -1,4 +1,4 @@
-<template name="adminPage">
+<template name="admin">
     <form>
 
         New word: <input type="text" id="txtNewWord" value="{{sNewWord}}"><br><br>
@@ -17,7 +17,7 @@
 
     {{#each words}}
 
-    {{sNewWord}} :: {{description}} |||| date: {{dateAdded}} and type: {{sType}}
+    {{_id}} :: {{description}} |||| date: {{dateAdded}} and type: {{type}}
 
     {{/each}}
 

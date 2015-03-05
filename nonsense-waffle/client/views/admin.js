@@ -2,7 +2,7 @@
 
 if (Meteor.isClient) {
 
-  Template.adminPage.events({
+  Template.admin.events({
 
     //-------------BEGIN FORM CHANGE EVENTS-----------------
     'change [type=radio]': function(e,t){
@@ -30,7 +30,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.adminPage.helpers({
+  Template.admin.helpers({
     words: function() {
       return colWords.find();
     },
