@@ -1,0 +1,87 @@
+verb
+
+id= 5012 *+2011-09-04 09:28:12 *+Up in the sky. *+Flying *+
+
+id= 10003 *+2011-09-12 00:02:42 *+I took it so it's mine. *+Stealing *+
+
+id= 10004 *+2011-09-12 02:12:11 *+Often used to attract a mate. *+Dancing *+
+
+id= 11001 *+2011-09-04 09:28:08 *+Useful when fleeing from the cops. *+Running *+
+
+id= 11002 *+2011-09-04 09:28:18 *+Foul-mouthed witchcraft. *+Cursing *+
+
+id= 14005 *+2011-09-12 00:01:38 *+Combines well with courage, bravery and stupidity. *+Daring *+
+
+id= 19001 *+2011-09-12 00:01:34 *+Flying high. *+Soaring *+
+
+id= 20002 *+2011-09-12 02:12:07 *+Like on American Idol. *+Singing *+
+
+id= 22005 *+2011-09-17 18:19:15 *+Drip, drip drip. *+Dripping *+
+
+id= 24001 *+2011-09-17 17:59:11 *+May involve dripping. *+Draining *+
+
+id= 27001 *+2011-09-17 18:22:15 *+May or may not involve screaming and painful landings. *+Falling *+
+
+id= 39005 *+2011-10-15 09:55:06 *+As in having lots of boingy boingy. *+Bouncy *+
+
+id= 39009 *+2011-10-15 10:18:55 *+It's tracking something down. We just don't know what. *+Hunting *+
+
+id= 40009 *+2011-10-15 09:53:33 *+Hanging down below, possibly where it shouldn't be hanging. *+Dangling *+
+
+id= 40016 *+2011-10-15 10:20:23 *+Often in the seat of your pants. *+Splitting *+
+
+id= 40018 *+2011-10-15 10:23:18 *+Like when the pretty ladies walk by. *+Whistling *+
+
+id= 40020 *+2011-10-15 19:21:41 *+Pretending to be someone you're not. *+Acting *+
+
+id= 41006 *+2011-10-15 10:23:36 *+Like when your girlfriend dumps you. *+Weeping *+
+
+id= 42002 *+2011-10-15 09:31:45 *+For like, the special olympics or something. *+Training *+
+
+id= 42007 *+2011-10-15 10:11:07 *+To get better and better. *+Practicing *+
+
+id= 43002 *+2011-10-15 09:29:33 *+Crawling around in the dark and hiding in trees, just like your mom. *+Ninja *+
+
+id= 44005 *+2011-10-15 09:58:51 *+Like some kind of dead thing. *+Rotting *+
+
+id= 44006 *+2011-10-15 10:11:38 *+You do this in golf. *+Putting *+
+
+id= 44007 *+2011-10-15 10:17:55 *+You don't realy need all that old skin. *+Shedding *+
+
+id= 44008 *+2011-10-15 10:18:16 *+Sometimes it's better to just sleep all day and not go to work. *+Hibernating *+
+
+id= 45007 *+2011-10-15 10:21:01 *+You do this in the water. *+Swimming *+
+
+id= 45008 *+2011-10-15 10:23:50 *+You do it at night. *+Sleeping *+
+
+id= 46004 *+2011-10-15 10:07:08 *+It happens right before swallowing. *+Chewing *+
+
+id= 46006 *+2011-10-15 10:16:15 *+With a camera or gun or something. *+Shooting *+
+
+id= 46007 *+2011-10-15 10:16:33 *+Like a snake or a sneaky dude. *+Slithering *+
+
+id= 46009 *+2011-10-15 10:18:35 *+Oh my god it's gonna kill me! *+Threatening *+
+
+id= 46011 *+2011-10-15 10:20:03 *+Slowly drifting down and down and down. *+Sinking *+
+
+id= 46013 *+2011-10-15 19:23:16 *+Bonfires do this. *+Burning *+
+
+id= 46014 *+2011-10-15 19:23:35 *+The best kind of chairs do this. *+Reclining *+
+
+id= 50001 *+2011-11-11 08:14:14 *+You should do this more often *+Fondling *+
+
+id= 51001 *+2011-11-11 08:14:57 *+You do it out your butt *+Farting *+
+
+id= 52001 *+2011-11-11 08:15:23 *+Don't let Santa know that you do this. *+Pooping *+
+
+id= 52004 *+2011-11-11 08:51:46 *+Rollin' down the street... *+Rolling *+
+
+id= 52005 *+2011-11-11 08:53:09 *+Make your creation soothing, delicious, or utterly disgusting. *+Bubbling *+
+
+id= 55006 *+2011-11-14 07:40:21 *+You do this when you're not winning. *+Losing *+
+
+id= 61003 *+2012-01-29 04:31:24 *+Turning into... *+Becoming *+
+
+id= 64005 *+2012-01-29 04:38:06 *+Getting a sense of something. *+Feeling *+
+
+id= 65003 *+2012-01-29 04:33:04 *+Talking all about something. *+Describing *+

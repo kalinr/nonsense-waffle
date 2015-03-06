@@ -1,5 +1,5 @@
 <template name="admin">
-  <form>
+  <form id="formNewWord">
 
     New word: <input type="text" id="txtNewWord" value="{{sNewWord}}"><br><br>
     <input type="radio" name="optWordType" value="adjective">Adjective<br>
@@ -15,7 +15,22 @@
     <br>
   </form>
 
+  <!--
   {{#each words}}
   {{_id}} :: {{description}} |||| date: {{dateAdded}} and type: {{type}}
   {{/each}}
+-->
+  <hr>
+
+  <form id="formImport">
+    <p>Insert Google App Engine data (only works with the specific way that I formatted the *Export.txt files)</p>
+    <textarea id="txtImport" rows="4" cols="50" placeholder="dump export file here">{{sImport}}</textarea>
+    <br><br>
+
+    <button id="btnSubmitImport">submit </button>
+    <br>
+  </form>
+
+  <button id="btnClearWords">Clear Word Collection</button>
+
 </template>

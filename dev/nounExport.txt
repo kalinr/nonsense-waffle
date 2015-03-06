@@ -1,0 +1,237 @@
+noun
+
+id= 10001 *+2011-09-04 09:28:03 *+The thing in your neighbor's fancy-pants yard they sit under. *+Gazebo *+
+
+id= 14001 *+2011-09-04 09:30:39 *+It makes the world go round. *+Love *+
+
+id= 14003 *+2011-09-12 00:00:55 *+Thing that drives places. *+Car *+
+
+id= 15001 *+2011-09-04 09:30:43 *+Often involves mayonnaise. *+Sauce *+
+
+id= 15002 *+2011-09-12 00:01:19 *+You fold stuff inside it. Like files. *+Folder *+
+
+id= 16001 *+2011-09-12 00:01:00 *+You may be sitting in front of one right now. *+Computer *+
+
+id= 16002 *+2011-09-12 00:01:26 *+When you're trying to write, but not trying very hard. *+Scribble *+
+
+id= 16003 *+2011-09-12 00:07:12 *+He's Hoff-tastic! *+David Hasselhoff *+
+
+id= 16004 *+2011-09-12 02:11:40 *+I'll be back. *+Terminator *+
+
+id= 17001 *+2011-09-12 00:01:08 *+Often intended for reading. *+Book *+
+
+id= 17002 *+2011-09-12 00:01:12 *+Put stuff on it. *+Shelf *+
+
+id= 18001 *+2011-09-12 00:01:16 *+Tacos, burritos and quesadillas oh my! *+Tortilla *+
+
+id= 18003 *+2011-09-12 00:02:33 *+It's greener on the other side... unless you're smoking it. *+Grass *+
+
+id= 21001 *+2011-09-17 17:56:48 *+A thing that makes noise or talks about stuff. *+Speaker *+
+
+id= 22001 *+2011-09-17 17:57:15 *+Something that goes places. *+Vehicle *+
+
+id= 22003 *+2011-09-17 18:15:24 *+Sweet and delicious beverage. *+Juice *+
+
+id= 25001 *+2011-09-17 18:15:06 *+Everyone's favorite beverage. *+Beer *+
+
+id= 26001 *+2011-09-17 18:15:35 *+The thing that keeps us out. *+Wall *+
+
+id= 31002 *+2011-10-09 05:33:07 *+It's not alive but it does stuff. *+Machine *+
+
+id= 32001 *+2011-10-09 05:32:31 *+Those cute, cold, walking, swimming birds. *+Penguin *+
+
+id= 33001 *+2011-10-09 05:32:45 *+The dude who brings you stuff. *+Butler *+
+
+id= 39002 *+2011-10-15 09:43:44 *+You can blow them at weddings. *+Bubble *+
+
+id= 39003 *+2011-10-15 09:48:08 *+It's a kind of fish. *+Salmon *+
+
+id= 39006 *+2011-10-15 09:56:33 *+Apparantly they like to eat stuff. *+Goat *+
+
+id= 39007 *+2011-10-15 09:57:26 *+Flying high and full of hot air. *+Blimp *+
+
+id= 39008 *+2011-10-15 10:04:51 *+Those tiny little bugs we love so much. *+Lice *+
+
+id= 39010 *+2011-10-15 19:17:09 *+Like the little ones from the north pole. *+Elf *+
+
+id= 39011 *+2011-10-15 19:20:47 *+Like forks but with an added challenge. *+Chopsticks *+
+
+id= 40002 *+2011-10-15 09:30:08 *+Crawling around in the dark and hiding in trees, just like your mom. *+Ninja *+
+
+id= 40003 *+2011-10-15 09:31:12 *+Hopping trains and carrying a scarf on a stick. *+Hobo *+
+
+id= 40005 *+2011-10-15 09:40:35 *+Excretes from the faces of children and dogs. *+Slobber *+
+
+id= 40010 *+2011-10-15 09:59:07 *+Many of you have one in your head. *+Brain *+
+
+id= 40011 *+2011-10-15 10:00:00 *+A man-cart pulled by a small slave. *+Rickshaw *+
+
+id= 40012 *+2011-10-15 10:01:22 *+Like ice skates, but even more gay. *+Rollerblades *+
+
+id= 40015 *+2011-10-15 10:19:32 *+It's round. *+Disc *+
+
+id= 40017 *+2011-10-15 10:22:29 *+Making you do things you say you don't want to do but you really do want to do. *+Temptress *+
+
+id= 40019 *+2011-10-15 19:11:14 *+A guy who's all tough and sneaky. *+Commando *+
+
+id= 41003 *+2011-10-15 10:09:51 *+They can be cool or grow into giant stalks. *+Bean *+
+
+id= 41004 *+2011-10-15 10:10:48 *+Are we talking about varnish or a hot dog? *+Polish *+
+
+id= 41005 *+2011-10-15 10:21:19 *+It's just like a mystery. *+Puzzle *+
+
+id= 42004 *+2011-10-15 09:57:00 *+The fat dude from Star Wars. *+Jabba *+
+
+id= 42005 *+2011-10-15 10:03:11 *+Preferably white with no windows... down by the river. *+Van *+
+
+id= 42006 *+2011-10-15 10:04:13 *+Goes well with gravy. *+Biscuit *+
+
+id= 42008 *+2011-10-15 10:16:58 *+Some guy who thinks he's all that. *+Dude *+
+
+id= 42009 *+2011-10-15 19:16:04 *+The mormons have magical ones. *+Underpants *+
+
+id= 42010 *+2011-10-15 19:18:00 *+They live under bridges. *+Ogre *+
+
+id= 42011 *+2011-10-15 19:18:19 *+The best kind of food ever. *+Bacon *+
+
+id= 43003 *+2011-10-15 09:39:47 *+What's all the hubbub, Bub? *+Hubbub *+
+
+id= 43004 *+2011-10-15 09:45:03 *+Pure, unadulterated, nonsense. *+Popycock *+
+
+id= 44001 *+2011-10-15 09:32:21 *+Mmmmm.... delicious and will go straight to your thighs. *+Cake *+
+
+id= 44003 *+2011-10-15 09:44:04 *+Kinda like the oceon. *+Sea *+
+
+id= 44004 *+2011-10-15 09:50:05 *+A person who plays the piano. That's all I got. *+Pianist *+
+
+id= 44010 *+2011-10-15 19:16:44 *+A mythical creature from fairly tale land. *+Gnome *+
+
+id= 45002 *+2011-10-15 09:39:02 *+It goes on your face. *+Mustache *+
+
+id= 45005 *+2011-10-15 10:05:19 *+It's for quitters. *+Rehab *+
+
+id= 45009 *+2011-10-15 19:19:52 *+Has drugs inside it. *+Pill *+
+
+id= 46002 *+2011-10-15 09:52:58 *+It was cut off a cow or pig or something like that. *+Meat *+
+
+id= 46010 *+2011-10-15 10:19:18 *+The long pointy thing that you throw. *+Javelin *+
+
+id= 46012 *+2011-10-15 19:21:08 *+The best kind of blood sucker. *+Vampire *+
+
+id= 46015 *+2011-10-15 19:26:38 *+Often packing a long sword. *+Samurai *+
+
+id= 50002 *+2011-11-11 08:51:25 *+The smelly guy who won't stop staring at the top of your head. *+Zombie *+
+
+id= 51003 *+2011-11-11 08:48:06 *+Also known as hisouse. *+House *+
+
+id= 51005 *+2011-11-14 05:01:57 *+Nice kitty, warm kitty, fuzzy kitty... *+Pussycat *+
+
+id= 52002 *+2011-11-11 08:47:34 *+Aaaaaaaar! *+Pirate *+
+
+id= 52003 *+2011-11-11 08:50:26 *+She thinks she's really, really special. *+Princess *+
+
+id= 54001 *+2011-11-11 08:40:11 *+Those one-eyed freaks from the sewers. *+Cyclops *+
+
+id= 55001 *+2011-11-11 08:41:24 *+The world's best yellow fruit. *+Banana *+
+
+id= 55005 *+2011-11-11 08:53:43 *+You can call it a vegetable if you want 'cause it's got fruit in it. *+Pie *+
+
+id= 56002 *+2011-11-11 08:50:39 *+He fixes people. *+Doctor *+
+
+id= 57001 *+2011-11-14 07:40:00 *+He who finds clues. *+Detective *+
+
+id= 59004 *+2012-01-29 04:30:48 *+The people who just sit and watch. *+Audience *+
+
+id= 59005 *+2012-01-29 04:40:03 *+Where you stay at night for a lot of money. *+Hotel *+
+
+id= 59007 *+2012-01-29 04:43:11 *+A place where you buy stuff. *+Market *+
+
+id= 59009 *+2012-01-29 04:48:46 *+Working for the man to enforce his rules. *+Police *+
+
+id= 61005 *+2012-01-29 04:36:46 *+The big machines that do stuff for us. *+Equipment *+
+
+id= 61007 *+2012-01-29 04:56:10 *+The same on all four sides. *+Square *+
+
+id= 61008 *+2012-01-29 05:04:38 *+It's whole and wide. *+World *+
+
+id= 62002 *+2012-01-29 04:40:56 *+I think I'm one of these. *+Human *+
+
+id= 62006 *+2012-01-29 04:50:39 *+Running with water. *+River *+
+
+id= 62007 *+2012-01-29 04:56:58 *+Someone who learns stuff. *+Student *+
+
+id= 63005 *+2012-01-29 04:56:25 *+The folks who run the place. *+Staff *+
+
+id= 63007 *+2012-01-29 05:03:26 *+One who casts spells. *+Witch *+
+
+id= 64001 *+2012-01-29 04:31:42 *+The big dude with all the power. *+Dictator *+
+
+id= 64002 *+2012-01-29 04:36:02 *+I'm thinking that's just not true. *+Doubt *+
+
+id= 64006 *+2012-01-29 04:39:23 *+Stuff that happened before. *+History *+
+
+id= 64008 *+2012-01-29 04:40:22 *+Where you go to get well... or die. *+Hospital *+
+
+id= 64010 *+2012-01-29 04:50:51 *+Watching the front desk. *+Secretary *+
+
+id= 64011 *+2012-01-29 05:03:45 *+You probably won't really get it. *+Wish *+
+
+id= 64012 *+2012-01-29 05:03:59 *+You look out of it. *+Window *+
+
+id= 65001 *+2012-01-29 04:31:57 *+The place where people go. *+Church *+
+
+id= 65002 *+2012-01-29 04:32:09 *+Learn stuff here. *+College *+
+
+id= 65004 *+2012-01-29 04:38:32 *+Play it when you're bored. *+Game *+
+
+id= 65005 *+2012-01-29 04:47:14 *+Like something's living inside you... or you're just having guests. *+Host *+
+
+id= 65007 *+2012-01-29 05:04:27 *+This one of of those. These are all ones of those! *+Word *+
+
+id= 66002 *+2012-01-29 04:42:13 *+Out in the middle of the water. *+Island *+
+
+id= 70001 *+2012-02-18 23:47:16 *+Often used to grease things up. *+Butter *+
+
+id= 71001 *+2012-02-28 07:51:55 *+Sussudio! *+Phil Collins *+
+
+id= 72001 *+2012-02-28 07:54:01 *+A less-than-ideal witness for the prosecution. *+Kato Kaelin *+
+
+id= 73001 *+2012-03-07 22:11:16 *+The bad stuff that people do. *+Crime *+
+
+id= 77001 *+2012-09-09 23:32:27 *+Mystery meat in a can. *+Spam *+
+
+id= 78001 *+2012-09-09 23:32:51 *+You put meat and cheese in it. *+Taco *+
+
+id= 79001 *+2012-09-09 23:33:09 *+The guys with magic underpants. *+Mormon *+
+
+id= 79002 *+2012-09-09 23:39:19 *+Naughty, naughty. *+Nefarious *+
+
+id= 79004 *+2012-09-09 23:44:27 *+That thing on your neck. *+Goiter *+
+
+id= 79005 *+2012-09-09 23:44:53 *+Wear it on your foot. *+Sock *+
+
+id= 79006 *+2012-09-09 23:45:20 *+One of those games people play. *+Basketball *+
+
+id= 80001 *+2012-09-09 23:33:39 *+They think they're better than us. *+Cat *+
+
+id= 80002 *+2012-09-09 23:44:44 *+The place you pass out when you're too drunk to make it to the bedroom. *+Couch *+
+
+id= 81001 *+2012-09-09 23:34:01 *+Ensure you are actually laughing out loud if you type this. *+LOL *+
+
+id= 82002 *+2012-09-09 23:39:54 *+They grow from the ground. *+Tree *+
+
+id= 82004 *+2012-09-09 23:45:47 *+You put chocolate sauce on this. *+Icecream *+
+
+id= 83001 *+2012-09-09 23:38:57 *+Fake people hair. *+Wig *+
+
+id= 83003 *+2012-09-09 23:45:01 *+Go there to learn. *+School *+
+
+id= 87001 *+2012-09-09 23:43:46 *+Loaded with carbs and sugar, just the way nature intended. *+Donut *+
+
+id= 88001 *+2012-09-09 23:44:06 *+A disease with a funny name. *+Tuberculosis *+
+
+id= 88002 *+2012-09-09 23:45:08 *+Ride places in it. *+Bus *+
+
+id= 89001 *+2012-09-09 23:44:17 *+Something to write with. *+Pen *+
+
+id= 90001 *+2012-09-09 23:45:32 *+Something that flies. *+Airplane *+

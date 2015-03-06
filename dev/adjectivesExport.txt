@@ -1,0 +1,189 @@
+adje
+
+id= 10002 *+2011-09-04 09:29:59 *+You can see through it like it's not even there. *+Translucent *+
+
+id= 11003 *+2011-09-04 09:28:23 *+Plain old boring. *+Standard *+
+
+id= 12001 *+2011-09-04 09:28:28 *+Super-duper excellent and awesome. *+Amazing *+
+
+id= 13001 *+2011-09-04 09:30:29 *+It tastes like something. *+Flavored *+
+
+id= 14006 *+2011-09-12 00:02:26 *+Low cost. Synonymous with crappy. *+Cheap *+
+
+id= 15003 *+2011-09-12 00:02:30 *+In the real world, you don't always get what you pay for. *+Expensive *+
+
+id= 16005 *+2011-09-12 02:11:58 *+Only certain people are good enough. *+Exclusive *+
+
+id= 17003 *+2011-09-12 00:01:56 *+Insane in the membrane. *+Crazy *+
+
+id= 17004 *+2011-09-12 00:02:05 *+Interweb connectivity has been enabled. *+E - *+
+
+id= 17005 *+2011-09-12 02:11:49 *+Eeeeek! *+Scary *+
+
+id= 18002 *+2011-09-12 00:01:51 *+Like a mime on a Harley. *+Obnoxious *+
+
+id= 20001 *+2011-09-12 00:02:02 *+Because we just couldn't make enough. *+Limited-Edition *+
+
+id= 21002 *+2011-09-17 18:17:25 *+For a fun time, just add a spark. *+Flammable *+
+
+id= 21003 *+2011-09-17 18:21:01 *+Often involves an odor. *+Slimy *+
+
+id= 22002 *+2011-09-17 17:58:41 *+You're just not sure if it's gonna work. *+Experimental *+
+
+id= 22004 *+2011-09-17 18:17:47 *+Way out of your price range. *+Expensive *+
+
+id= 23001 *+2011-09-17 17:58:08 *+It's stinky. *+Smelly *+
+
+id= 23002 *+2011-09-17 18:16:08 *+It can get bigger and bigger. *+Expandable *+
+
+id= 24002 *+2011-09-18 23:28:48 *+It needs power. Probably useless on a desert island. *+Electric *+
+
+id= 25002 *+2011-09-17 18:19:49 *+Ewey and gooey and gross. *+Gooey *+
+
+id= 29001 *+2011-09-25 10:44:00 *+Sometimes you just can't see where you're going. *+Blind *+
+
+id= 31003 *+2011-10-09 05:33:53 *+Powered by really, really small things. *+Atomic *+
+
+id= 34001 *+2011-10-09 05:34:09 *+It spins round and round and round. *+Revolving *+
+
+id= 35001 *+2011-10-09 05:34:26 *+Aloha. *+Hawaiian *+
+
+id= 36001 *+2011-10-09 05:34:43 *+Beep borp. Take me to your leader. *+Alien *+
+
+id= 36002 *+2011-10-09 05:36:18 *+It won't all go to your thighs. *+Low-Fat *+
+
+id= 37001 *+2011-10-09 05:35:18 *+Stay away from the bubbly salsa. *+Bubbly *+
+
+id= 37002 *+2011-10-09 05:36:46 *+It won't ever go away no matter how much you want it to. *+Permanent *+
+
+id= 38001 *+2011-10-09 05:35:51 *+Do it right freaking now! *+High-Priority *+
+
+id= 39004 *+2011-10-15 09:54:39 *+A good quality for a dominatrix. *+Strict *+
+
+id= 39012 *+2011-10-15 19:27:55 *+Where the robots are our overlords. *+Futuristic *+
+
+id= 40004 *+2011-10-15 09:35:23 *+Spawned from hell and satan and Justin Bieber. *+Evil *+
+
+id= 40006 *+2011-10-15 09:45:31 *+As in coming in glob form. *+Globular *+
+
+id= 40007 *+2011-10-15 09:47:50 *+Sometimes we claim it's accidental but it's really on purpose. *+Accidental *+
+
+id= 40008 *+2011-10-15 09:51:38 *+To be able to run around fast and lift heavy stuff. *+Athletic *+
+
+id= 40013 *+2011-10-15 10:02:23 *+Playing for the other team and totally loving it. *+Gay *+
+
+id= 41002 *+2011-10-15 09:47:09 *+Like a jolly fat man's belly. *+Jiggly *+
+
+id= 43005 *+2011-10-15 09:58:21 *+Because someone cut him off in traffic. *+Angry *+
+
+id= 44009 *+2011-10-15 10:21:37 *+No one else can share! *+Private *+
+
+id= 44011 *+2011-10-15 19:27:22 *+As in coming from Asia. *+Asian *+
+
+id= 45001 *+2011-10-15 09:33:42 *+Significantly less ugly. *+Beautiful *+
+
+id= 45003 *+2011-10-15 09:45:57 *+All beefy, juicy and manly. *+Muscular *+
+
+id= 45004 *+2011-10-15 09:52:19 *+Involving housewives, minivans and soccer. *+Suburban *+
+
+id= 45006 *+2011-10-15 10:12:25 *+All sorts of different kinds of people to make fun of. *+Multicultural *+
+
+id= 46001 *+2011-10-15 09:36:03 *+Having done a bunch of important stuff that people actually care about. *+Accomplished *+
+
+id= 46003 *+2011-10-15 09:57:53 *+Much like this game. *+Stupid *+
+
+id= 46005 *+2011-10-15 10:13:36 *+Getting melted and reconstituted again and again. *+Recycled *+
+
+id= 46008 *+2011-10-15 10:17:31 *+In a giant dress and earrings. *+Extravagent *+
+
+id= 51002 *+2011-11-11 08:37:46 *+Like clouds and cotton and happy and wonderful things. *+Fluffy *+
+
+id= 51004 *+2011-11-11 08:54:20 *+Like a baby bear. *+Snuggly *+
+
+id= 53001 *+2011-11-11 08:38:32 *+Not quite pointed in the right direction. *+Askew *+
+
+id= 53002 *+2011-11-11 08:39:28 *+It's all in your head. *+Psychosomatic *+
+
+id= 54002 *+2011-11-11 08:48:24 *+These are the best kind of jokes for parties. *+Offensive *+
+
+id= 54003 *+2011-11-11 08:55:34 *+He talks about stuff he thinks is important. *+Preacher *+
+
+id= 55002 *+2011-11-11 08:42:33 *+Not... quite... normal. *+Wonky *+
+
+id= 55003 *+2011-11-11 08:42:58 *+The Mormons have magical ones. *+Underpants *+
+
+id= 55004 *+2011-11-11 08:48:54 *+The cancer from these will melt your brain. *+Cellular *+
+
+id= 56001 *+2011-11-11 08:43:58 *+...but it feels so good I'm just gonna do it anyway. *+Naughty *+
+
+id= 56003 *+2011-11-11 08:52:19 *+Everything's better when it's gold colored. *+Golden *+
+
+id= 56004 *+2011-11-11 08:56:51 *+A church can be a church of anything, such as the church of bacon. *+Church *+
+
+id= 59006 *+2012-01-29 04:42:47 *+All fancy-pants with big words and stuff. *+Literary *+
+
+id= 59008 *+2012-01-29 04:46:46 *+A guy. *+Male *+
+
+id= 61002 *+2012-01-29 04:30:27 *+Not quite so great. *+Average *+
+
+id= 61004 *+2012-01-29 04:32:44 *+Your vote counts. *+Democratic *+
+
+id= 61006 *+2012-01-29 04:37:12 *+They know about stuff 'cause they've been there. *+Experienced *+
+
+id= 61009 *+2012-01-29 05:05:16 *+Not been around long. *+New *+
+
+id= 62003 *+2012-01-29 04:41:19 *+Like, right now. *+Immediate *+
+
+id= 62004 *+2012-01-29 04:46:33 *+Heals the wounds. *+Medicinal *+
+
+id= 62005 *+2012-01-29 04:49:55 *+Those who go to church. *+Religious *+
+
+id= 62008 *+2012-01-29 05:02:49 *+Coming together. *+United *+
+
+id= 62009 *+2012-01-29 05:04:54 *+What this is. *+Wacky *+
+
+id= 63001 *+2012-01-29 04:31:00 *+Not so good. *+Bad *+
+
+id= 63002 *+2012-01-29 04:49:05 *+As in, moving forward. *+Progressive *+
+
+id= 63003 *+2012-01-29 04:49:18 *+As in, building stuff. *+Productive *+
+
+id= 63004 *+2012-01-29 04:51:15 *+Something from down south. *+Southern *+
+
+id= 63006 *+2012-01-29 04:56:39 *+Not curving at all. *+Straight *+
+
+id= 64003 *+2012-01-29 04:36:22 *+Having to do with all those dollars and cents. *+Economic *+
+
+id= 64004 *+2012-01-29 04:37:46 *+Thinking reliably, but not so logically. *+Faithful *+
+
+id= 64007 *+2012-01-29 04:39:49 *+Thinking about deep stuff. *+Philosophical *+
+
+id= 64009 *+2012-01-29 04:48:13 *+Not big on war. *+Peaceful *+
+
+id= 65006 *+2012-01-29 05:03:09 *+West side! *+Western *+
+
+id= 66001 *+2012-01-29 04:32:28 *+All over the country. *+National *+
+
+id= 66003 *+2012-01-29 04:47:41 *+It blows up big stuff. *+Nuclear *+
+
+id= 77002 *+2012-09-09 23:34:23 *+Ensure you are actually laughing out loud if you type this. *+LOL *+
+
+id= 77003 *+2012-09-09 23:42:29 *+With lots of weight. *+Cumbersome *+
+
+id= 78002 *+2012-09-09 23:39:38 *+Naughty, naughty. *+Nefarious *+
+
+id= 79003 *+2012-09-09 23:41:10 *+Shiny. *+Glimmering *+
+
+id= 82001 *+2012-09-09 23:38:44 *+People who don't wash have this quality. *+Odiferous *+
+
+id= 82003 *+2012-09-09 23:43:24 *+Just fucking standing there. *+Stoic *+
+
+id= 83002 *+2012-09-09 23:42:42 *+Sloppy yet delicious. *+Soupy *+
+
+id= 84001 *+2012-09-09 23:40:24 *+Like sunsets and boobies. *+Pretty *+
+
+id= 85001 *+2012-09-09 23:40:38 *+High up there. *+Tall *+
+
+id= 86001 *+2012-09-09 23:41:46 *+The nice guy. *+Chivalrous *+
+
+id= 86002 *+2012-09-09 23:43:13 *+At one with God. *+Holey *+
