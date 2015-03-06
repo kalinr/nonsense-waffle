@@ -1,0 +1,5 @@
+3-3-2015 3hrs - started converting tutorial and got words saving into a collection
+3-4-2015 8hrs - organized the files into reasonable directory structure; set up iron-router and set up the main app routes;
+  built a rough draft with a little CSS of the build page that had the form elements and could add words to a collection but still wasn't ready to add to the entry collection
+3-5-2015 5hrs - added home, view, build and admin links into main.html; fixed error when accessing view page without a /id; finished off the
+  build page's basic functionality, and got a dirty list of entries and single entry viewing on view page

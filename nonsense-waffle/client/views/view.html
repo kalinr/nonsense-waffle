@@ -1,6 +1,11 @@
 <template name="view">
-viewing window!!!!<br>
-   <p> viewing id: {{sEntryID}} huh? </p>
-   <p>this is my entry content: {{sEntryContent}}</p>
+  <p> viewing id: {{oEntry._id}} with title: {{oEntry.title}} </p>
+  <p>this is my entry content: {{oEntry.content}}</p>
+
+  {{#each entries}}
+    <div class="entryCard wordCard" entryid="{{_id}}">
+      <div class="wordCardTitle" >{{title}}</div> {{content}} <br> {{dateAdded}}
+    </div>
+  {{/each}}
 
 </template>

@@ -17,7 +17,5 @@ Lists.defaultName = function() {
 Todos = new Meteor.Collection('todos');
 */
 
-//TODO: when this file gets large enough to be split, we should move it out of lib and into collections directory
-
 colWords = new Meteor.Collection('words');
 colEntries = new Meteor.Collection('entries');
