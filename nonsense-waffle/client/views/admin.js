@@ -5,8 +5,11 @@ if (Meteor.isClient) {
   Template.admin.events({
 
     //-------------BEGIN FORM CHANGE EVENTS-----------------
-    'change [type=radio]': function(e,t){
+    'change [name=optWordType]': function(e,t){
       Session.set('sType', e.target.value);
+    },
+    'change [name=optCollectionType]': function(e,t){
+      Session.set('sCollectionType', e.target.value);
     },
     'change #txtWordDescription': function(evt){
       Session.set('sDescription', evt.target.value);
@@ -41,6 +44,28 @@ if (Meteor.isClient) {
       Session.set('sType', '');
       Session.set('sDescription', '');
       Session.set('sNewWord', '');
+    },
+
+    //submit form action covers both the button click and enter button
+    'submit #formGetJSON': function(evt){
+      evt.preventDefault();
+      var sCollectionType = Session.get('sCollectionType'),
+        oOutput;
+
+      switch(sCollectionType){
+        case "colWords":
+          oOutput = colWords.find().fetch();
+          break;
+        case "colEntries":
+          oOutput = colEntries.find().fetch();
+          break;
+        case "colUsers":
+          break;
+        default :
+          console.log("something strange happened with sCollectionType");
+          break;
+      }
+      Session.set("sJSONOutput", JSON.stringify(oOutput) );
     },
 
     //this takes one of three files that I created by copying and pasting the google app engine datastore into txt files in the dev directory
@@ -97,6 +122,9 @@ if (Meteor.isClient) {
     },
     sType: function(){
       return Session.get('sType');
+    },
+    sJSONOutput: function(){
+      return Session.get('sJSONOutput');
     },
     sImport: function(){
       return Session.get('sImport');
