@@ -4,9 +4,6 @@ Template.build.events({
   'change #txtContent': function(evt){
     Session.set("sContent", evt.target.value);
   },
-  /*'change #txtTitle': function(evt){
-    Session.set("sTitle", evt.target.value);
-  },*/
   'click #btnGetWord': function(evt){
     //TODO: maybe save aAllWords to Session so we aren't re-querying this every time... but we also need to move this to only run on the server side since this needs to be secure
     var aAllWords = colWords.find().fetch(),
@@ -22,19 +19,15 @@ Template.build.events({
       if(aAvailableWords[i]._id === oNewWord._id){
         //it shouldn't happen too often that a user gets a card they already drew, so lets just return and pretend it didn't happen.
         //but we will log the event
+        console.log("drew same word card id", aAllWords.length, oNewWord._id);
         return;
       }
     }
-
+    //save the new word
     aAvailableWords.push(oNewWord);
     Session.set('aAvailableWords', aAvailableWords);
 
-    //TODO: will probably want to split this out to some kind of view handling
-    var width = 0;
-    $('.wordCard').each(function() {
-      width += $(this).outerWidth( true );
-    });
-    $('#wordOverflow').css('width', width + "px");
+    render();
   },
   //add a word to your current creation's title
   'click .btnAddWord': function(evt){
@@ -92,18 +85,6 @@ Template.build.events({
   }
 });
 
-Template.build.helpers({
-  words: function() {//the word cards
-    return Session.get('aAvailableWords');
-  },
-  sContent: function(){
-    return Session.get("sContent");
-  },
-  sTitle: function(){
-    return getTitle();
-  }
-});
-
 var getTitle = function(){
   var aUsedWords = Session.get("aUsedWords");
   if(!aUsedWords){//if user hasn't selected any wordcards yet, display empty string
@@ -111,3 +92,30 @@ var getTitle = function(){
   }
   return aUsedWords.join(" ");//create the title by concatenating all the words from the array with a space delimeter
 }
+
+var render = function(){
+  var aAvailableWords = Session.get("aAvailableWords"),
+    nWidth;
+
+  //no need to do anything if we have no cards
+  if(!aAvailableWords || aAvailableWords.length === 0){
+    return;
+  }
+
+  //get width of single word card and multiply it by total word cards
+  nWidth = $('#wordOverflow .wordCard:first').outerWidth( true ) * aAvailableWords.length;
+  //set our container div to that width so that it scrolls horizontally inside #wordContainer
+  $('#wordOverflow').css('width', nWidth + "px");
+}
+
+Template.build.helpers({
+  words: function() {//the word cards
+    return Session.get('aAvailableWords');
+  },
+  sContent: function(){
+    return Session.get("sContent");
+  },
+  sTitle: getTitle
+});
+
+Template.build.rendered = render;

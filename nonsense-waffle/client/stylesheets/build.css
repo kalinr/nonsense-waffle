@@ -1,6 +1,5 @@
 #buildForm {
   clear: both;
-  margin-left: 10px;
   margin-top: 40px;
 }
 
@@ -10,7 +9,6 @@
   border: inset;
   overflow-x: scroll;
   overflow-y: hidden;
-
 }
 
 #btnClearTitle{
@@ -37,4 +35,8 @@
   position:absolute;
   bottom: 10px;
   left: 10px;
+}
+
+#txtContent{
+  width: 100%;
 }
