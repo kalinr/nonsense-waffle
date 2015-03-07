@@ -1,8 +1,10 @@
+"use strict";
+
 Router.configure({
   layoutTemplate: 'main'
 });
 
-Router.map( function () {
+Router.map(function () {
   this.route('home', {path: '/'});
 
   this.route('/view', {

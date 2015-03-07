@@ -1,22 +1,48 @@
+"use strict";
+
+var getTitle = function(){
+  var aUsedWords = Session.get("aUsedWords");
+  if (!aUsedWords) {//if user hasn't selected any wordcards yet, display empty string
+    return "";
+  }
+  return aUsedWords.join(" ");//create the title by concatenating all the words from the array with a space delimeter
+};
+
+var render = function () {
+  var aAvailableWords = Session.get("aAvailableWords"),
+    nWidth;
+
+  //no need to do anything if we have no cards
+  if (!aAvailableWords || aAvailableWords.length === 0) {
+    return;
+  }
+
+  //get width of single word card and multiply it by total word cards
+  nWidth = $('#wordOverflow .wordCard:first').outerWidth( true ) * aAvailableWords.length;
+  //set our container div to that width so that it scrolls horizontally inside #wordContainer
+  $('#wordOverflow').css('width', nWidth + "px");
+};
+
 Template.build.events({
 
   //-------------BEGIN FORM CHANGE EVENTS-----------------
   'change #txtContent': function(evt){
     Session.set("sContent", evt.target.value);
   },
-  'click #btnGetWord': function(evt){
+  'click #btnGetWord': function (evt) {
     //TODO: maybe save aAllWords to Session so we aren't re-querying this every time... but we also need to move this to only run on the server side since this needs to be secure
     var aAllWords = colWords.find().fetch(),
-      oNewWord = aAllWords[_.random(0, aAllWords.length-1)],
-      aAvailableWords = Session.get('aAvailableWords');
+      oNewWord = aAllWords[_.random(0, aAllWords.length - 1)],
+      aAvailableWords = Session.get('aAvailableWords'),
+      i;
 
-    if(!aAvailableWords){
+    if (!aAvailableWords) {
       aAvailableWords = [];
     }
 
     //loop through all the words we already have in our personal list to see if this just happens to already be there
-    for(var i = 0; i<aAvailableWords.length; i++){
-      if(aAvailableWords[i]._id === oNewWord._id){
+    for (i = 0; i < aAvailableWords.length; i++) {
+      if (aAvailableWords[i]._id === oNewWord._id){
         //it shouldn't happen too often that a user gets a card they already drew, so lets just return and pretend it didn't happen.
         //but we will log the event
         console.log("drew same word card id", aAllWords.length, oNewWord._id);
@@ -30,13 +56,13 @@ Template.build.events({
     render();
   },
   //add a word to your current creation's title
-  'click .btnAddWord': function(evt){
+  'click .btnAddWord': function (evt) {
     var sID = evt.target.id,
       sNewWord = sID.substr(11),//get the last part of the element's id, which corresponds to the word
       aUsedWords = Session.get("aUsedWords");
 
     //TODO: find out if there's a better way to set Session default values
-    if(!aUsedWords){
+    if (!aUsedWords) {
       aUsedWords = [];
     }
     aUsedWords.push(sNewWord);//add to our list of words for this entry
@@ -46,11 +72,12 @@ Template.build.events({
   'click .btnDiscardWord': function(evt){
     var sID = evt.target.id,
       sDiscardWord = sID.substr(15),//get the last part of the element's id, which corresponds to the word
-      aAvailableWords = Session.get('aAvailableWords');
+      aAvailableWords = Session.get('aAvailableWords'),
+      i;
     //TODO: need to add some animation so that user can actually tell that it disappeared
-    for(var i = 0; i < aAvailableWords.length; i++){
-      if(aAvailableWords[i]._id === sDiscardWord){
-        aAvailableWords.splice(i,1);
+    for (i = 0; i < aAvailableWords.length; i++){
+      if (aAvailableWords[i]._id === sDiscardWord) {
+        aAvailableWords.splice(i, 1);
         //TODO: we need to do at least some of this on the server so that this is a secure action
         //I guess we'll need to be adding and removing these words from the user collection since each user should have his persistent hand of word cards
         Session.set("aAvailableWords", aAvailableWords);
@@ -61,13 +88,13 @@ Template.build.events({
     //TODO: add logging and error handling features (splunk!)
     console.log("Error!!!! it never found the word to delete!");
   },
-  'click #btnClearTitle': function(evt){
+  'click #btnClearTitle': function (evt) {
     Session.set("aUsedWords", []);
   },
   //-------------END FORM CHANGE EVENTS-----------------
 
   //submit form action covers both the button click and enter button
-  'submit form': function(evt){
+  'submit form': function (evt) {
     evt.preventDefault();
 
     //insert the new entry into the database, letting mongo create its _id
@@ -85,34 +112,11 @@ Template.build.events({
   }
 });
 
-var getTitle = function(){
-  var aUsedWords = Session.get("aUsedWords");
-  if(!aUsedWords){//if user hasn't selected any wordcards yet, display empty string
-    return "";
-  }
-  return aUsedWords.join(" ");//create the title by concatenating all the words from the array with a space delimeter
-}
-
-var render = function(){
-  var aAvailableWords = Session.get("aAvailableWords"),
-    nWidth;
-
-  //no need to do anything if we have no cards
-  if(!aAvailableWords || aAvailableWords.length === 0){
-    return;
-  }
-
-  //get width of single word card and multiply it by total word cards
-  nWidth = $('#wordOverflow .wordCard:first').outerWidth( true ) * aAvailableWords.length;
-  //set our container div to that width so that it scrolls horizontally inside #wordContainer
-  $('#wordOverflow').css('width', nWidth + "px");
-}
-
 Template.build.helpers({
-  words: function() {//the word cards
+  words: function () {//the word cards
     return Session.get('aAvailableWords');
   },
-  sContent: function(){
+  sContent: function () {
     return Session.get("sContent");
   },
   sTitle: getTitle
