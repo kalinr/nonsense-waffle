@@ -1,23 +1,25 @@
 <template name="build">
 
   <div id="wordContainer">
-    {{#each words}}
-      <div class="wordCard">
-        <div class="wordCardTitle" >{{_id}}</div> {{description}} <br> {{type}}
-        <br>
-        <button class="btnAddWord alignBottom" id="btnAddWord_{{_id}}">Add</button>
-      </div>
-    {{/each}}
-
-    <button id="btnDrawCard">Draw Card</button>
-
-    <br><br>
+    <div id="wordOverflow">
+      {{#each words}}
+        <div class="wordCard">
+          <div class="wordCardTitle" >{{_id}}</div> {{description}} <br> {{type}}
+          <br>
+          <div class="wordCardButtons">
+            <button class="btnDiscardWord" id="btnDiscardWord_{{_id}}">Discard</button>
+            <button class="btnAddWord" id="btnAddWord_{{_id}}">Add</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
   </div>
-  <div  id="buildForm">
-    <form>
-      title: {{sTitle}} <button id="btnClearTitle">clear</button>
 
-      <br><br>
+  <button id="btnGetWord">Draw Card</button>
+
+  <div  id="buildForm">
+    title: {{sTitle}} <button id="btnClearTitle">clear</button>
+    <form>
       <br>
       <textarea id="txtContent" rows="4" cols="50" placeholder="type your crap here">{{sContent}}</textarea>
       <br><br>

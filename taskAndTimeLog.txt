@@ -1,5 +1,11 @@
 3-3-2015 3hrs - started converting tutorial and got words saving into a collection
 3-4-2015 8hrs - organized the files into reasonable directory structure; set up iron-router and set up the main app routes;
   built a rough draft with a little CSS of the build page that had the form elements and could add words to a collection but still wasn't ready to add to the entry collection
-3-5-2015 5hrs - added home, view, build and admin links into main.html; fixed error when accessing view page without a /id; finished off the
-  build page's basic functionality, and got a dirty list of entries and single entry viewing on view page
+3-5-2015 8hrs - added home, view, build and admin links into main.html; fixed error when accessing view page without a /id; finished off the
+  build page's basic functionality, and got a dirty list of entries and single entry viewing on view page;added a feature to the admin page
+  to import some text files I created from copying and pasting the output of the old google app engine version of this game, so we can now
+  easily get all the old words into the game by pasting them into the box on the admin page
+3-6-2015 - 7hrs - changed dates to use date object instead of timestamp, as recommended by mongodb docs; got rid of clear word collection button
+  in admin page; made build page word list do an infinite horizontal scroll within its container; changed the getting of the word cards to getting
+  a single randomized card with each button click; added working discard button to each card; cleaned up the view a little bit (the view view if you will)
+  and split the stylesheet out into view.css and build.css

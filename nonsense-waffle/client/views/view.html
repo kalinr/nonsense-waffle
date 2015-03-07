@@ -1,10 +1,10 @@
 <template name="view">
-  <p> viewing id: {{oEntry._id}} with title: {{oEntry.title}} </p>
-  <p>this is my entry content: {{oEntry.content}}</p>
+  <h2>{{oEntry.title}}</h2>
+  <p>{{oEntry.content}}</p>
 
   {{#each entries}}
-    <div class="entryCard wordCard" entryid="{{_id}}">
-      <div class="wordCardTitle" >{{title}}</div> {{content}} <br> {{dateAdded}}
+    <div class="entryCard" entryid="{{_id}}">
+      {{title}}
     </div>
   {{/each}}
 

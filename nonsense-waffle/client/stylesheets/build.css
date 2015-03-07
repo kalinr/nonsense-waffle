@@ -1,12 +1,16 @@
 #buildForm {
   clear: both;
   margin-left: 10px;
+  margin-top: 40px;
 }
 
 #wordContainer{
   margin-bottom: 20px;
-  height:200px;
+  height:220px;
   border: inset;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
 }
 
 #btnClearTitle{
@@ -21,15 +25,16 @@
   position: relative;
   border: solid;
   border-color: #299679;
+  text-align: center;
   width: 150px;
   float: left;
-  height:180px;
+  height: 180px;
   margin: 10px 5px;
-  text-align: center;
   border-radius: 10px;
 }
 
-.alignBottom {
-  position: absolute;
+.wordCardButtons{
+  position:absolute;
   bottom: 10px;
+  left: 10px;
 }

@@ -35,7 +35,7 @@ if (Meteor.isClient) {
         _id: Session.get('sNewWord'),
         description: Session.get('sDescription'),
         type: Session.get('sType'),
-        dateAdded: Date.now()
+        dateAdded: new Date()
       });
 
       Session.set('sType', '');
@@ -68,7 +68,7 @@ if (Meteor.isClient) {
             break;
           case 2:
             //create the new object, with our type and set the date to now()
-            aDocuments[nCount] = {type:sType, description:aWords[i], dateAdded:Date.now()};
+            aDocuments[nCount] = {type:sType, description:aWords[i], dateAdded:new Date()};
             break;
           case 3:
             aDocuments[nCount]._id = aWords[i];

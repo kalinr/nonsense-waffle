@@ -1,0 +1,13 @@
+.entryCard {
+  position: relative;
+  border: solid;
+  border-color: #299679;
+  width: 130px;
+  float: left;
+  height:80px;
+  margin: 5px 3px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;//TODO: check if we need both of these (apparently browsers are inconsistent here)
+  cursor: hand;
+}
