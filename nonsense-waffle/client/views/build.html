@@ -1,30 +1,30 @@
-<template name="build">
+<template name='build'>
 
-  <div id="wordContainer">
-    <div id="wordOverflow">
+  <div id='wordContainer'>
+    <div id='wordOverflow'>
       {{#each words}}
-        <div class="wordCard">
-          <div class="wordCardTitle" >{{_id}}</div> {{description}} <br> {{type}}
+        <div class='wordCard'>
+          <div class='wordCardTitle' >{{_id}}</div> {{description}} <br> {{type}}
           <br>
-          <div class="wordCardButtons">
-            <button class="btnDiscardWord" id="btnDiscardWord_{{_id}}">Discard</button>
-            <button class="btnAddWord" id="btnAddWord_{{_id}}">Add</button>
+          <div class='wordCardButtons'>
+            <button class='btnDiscardWord' id='btnDiscardWord_{{_id}}'>Discard</button>
+            <button class='btnAddWord' id='btnAddWord_{{_id}}'>Add</button>
           </div>
         </div>
       {{/each}}
     </div>
   </div>
 
-  <button id="btnGetWord">Draw Card</button>
+  <button id='btnGetWord'>Draw Card</button>
 
-  <div  id="buildForm">
-    title: {{sTitle}} <button id="btnClearTitle">clear</button>
+  <div  id='buildForm'>
+    title: {{sTitle}} <button id='btnClearTitle'>clear</button>
     <form>
       <br>
-      <textarea class="fullWidth" id="txtContent" rows="5" placeholder="type your crap here">{{sContent}}</textarea>
+      <textarea class='fullWidth' id='txtContent' rows='5' placeholder='type your crap here'>{{sContent}}</textarea>
       <br><br>
 
-      <button id="btnSubmitEntry">submit entry</button>
+      <button id='btnSubmitEntry'>submit entry</button>
       <br>
     </form>
   </div>

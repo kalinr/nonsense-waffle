@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Router.configure({
   layoutTemplate: 'main'
@@ -9,8 +9,8 @@ Router.map(function () {
 
   this.route('/view', {
     path: '/view/:sEntryID?',
-    data: function(){
-      return {sEntryID:this.params.sEntryID};
+    data: function () {
+      return {sEntryID: this.params.sEntryID};
     }
   });
   this.route('/build');

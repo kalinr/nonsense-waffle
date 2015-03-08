@@ -1,45 +1,45 @@
-<template name="admin">
+<template name='admin'>
   <p>This is not intended for regular users but if you want to play with it, it's all good. I keep backups.</p>
-  <form id="formNewWord">
-    New word: <input type="text" id="txtNewWord" value="{{sNewWord}}"><br><br>
-    <input type="radio" name="optWordType" value="adjective">Adjective<br>
-    <input type="radio" name="optWordType" value="noun">Noun<br>
-    <input type="radio" name="optWordType" value="verb">Verb<br>
-    <input type="radio" name="optWordType" value="person">Person<br>
-    <input type="radio" name="optWordType" value="naughty">Naughty<br>
+  <form id='formNewWord'>
+    New word: <input type='text' id='txtNewWord' value='{{sNewWord}}'><br><br>
+    <input type='radio' name='optWordType' value='adjective'>Adjective<br>
+    <input type='radio' name='optWordType' value='noun'>Noun<br>
+    <input type='radio' name='optWordType' value='verb'>Verb<br>
+    <input type='radio' name='optWordType' value='person'>Person<br>
+    <input type='radio' name='optWordType' value='naughty'>Naughty<br>
     <br>
-    <textarea class="fullWidth" id="txtWordDescription" rows="4" cols="50" placeholder="funny word description">{{sDescription}}</textarea>
+    <textarea class='fullWidth' id='txtWordDescription' rows='4' cols='50' placeholder='funny word description'>{{sDescription}}</textarea>
     <br><br>
-    <button id="btnSubmitWord">submit new word</button>
+    <button id='btnSubmitWord'>submit new word</button>
   </form>
 
   <br>
   <hr>
   <br>
 
-  <form id="formGetJSON">
+  <form id='formGetJSON'>
     <p>Get JSON backup of the current collection state</p>
-    <input type="radio" name="optCollectionType" value="colWords">Words<br>
-    <input type="radio" name="optCollectionType" value="colEntries">Entries<br>
-   <!-- <input type="radio" name="optCollectionType" value="colUsers">Users<br> -->
+    <input type='radio' name='optCollectionType' value='colWords'>Words<br>
+    <input type='radio' name='optCollectionType' value='colEntries'>Entries<br>
+   <!-- <input type='radio' name='optCollectionType' value='colUsers'>Users<br> -->
     <br>
     <br>
-    <button id="btnGetJSON">Get JSON</button>
+    <button id='btnGetJSON'>Get JSON</button>
     <br>
     <br>
-    <textarea class="fullWidth" id="txtJSON" rows="4" placeholder="your JSON will appear here">{{sJSONOutput}}</textarea>
+    <textarea class='fullWidth' id='txtJSON' rows='4' placeholder='your JSON will appear here'>{{sJSONOutput}}</textarea>
   </form>
 
   <br>
   <hr>
   <br>
 
-  <form id="formImport">
+  <form id='formImport'>
     <p>Insert Google App Engine data (only works with the specific way that I formatted the *Export.txt files)</p>
-    <textarea class="fullWidth" id="txtImport" rows="4" cols="50" placeholder="dump export file here">{{sImport}}</textarea>
+    <textarea class='fullWidth' id='txtImport' rows='4' cols='50' placeholder='dump export file here'>{{sImport}}</textarea>
     <br><br>
 
-    <button id="btnSubmitImport">submit </button>
+    <button id='btnSubmitImport'>submit </button>
     <br>
   </form>
   <br>

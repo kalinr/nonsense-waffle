@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 Template.admin.events({
 
@@ -21,7 +21,7 @@ Template.admin.events({
   /*'click #btnClearWords': function (evt) {
 
     //Okay, this doesn't work because this client-side code isn't trusted. Doing this manually in server.js instead
-    if(confirm("Are you sure you want to delete all records from the word database. Please don't do this unless you know what you're doing. All the words will be gone from the game if you do.")) {
+    if(confirm('Are you sure you want to delete all records from the word database. Please don't do this unless you know what you're doing. All the words will be gone from the game if you do.')) {
       colWords.remove({});
     }
   },*/
@@ -51,19 +51,19 @@ Template.admin.events({
       oOutput;
 
     switch (sCollectionType) {
-    case "colWords":
+    case 'colWords':
       oOutput = colWords.find().fetch();
       break;
-    case "colEntries":
+    case 'colEntries':
       oOutput = colEntries.find().fetch();
       break;
-    case "colUsers":
+    case 'colUsers':
       break;
     default:
-      console.log("something strange happened with sCollectionType");
+      console.log('something strange happened with sCollectionType');
       break;
     }
-    Session.set("sJSONOutput", JSON.stringify(oOutput) );
+    Session.set('sJSONOutput', JSON.stringify(oOutput) );
   },
 
   //this takes one of three files that I created by copying and pasting the google app engine datastore into txt files in the dev directory
@@ -75,7 +75,7 @@ Template.admin.events({
 
     var sData = Session.get('sImport'),
       sType = sData.substr(0, 4),//grab the type from the top of the file
-      aWords = sData.split(' *+'),//I put a " *+' between each of them
+      aWords = sData.split(' *+'),//I put a ' *+' between each of them
       aDocuments = [],
       nCount = 0,
       i;

@@ -1,15 +1,15 @@
-"use strict";
+'use strict';
 
 var getTitle = function(){
-  var aUsedWords = Session.get("aUsedWords");
+  var aUsedWords = Session.get('aUsedWords');
   if (!aUsedWords) {//if user hasn't selected any wordcards yet, display empty string
-    return "";
+    return '';
   }
-  return aUsedWords.join(" ");//create the title by concatenating all the words from the array with a space delimeter
+  return aUsedWords.join(' ');//create the title by concatenating all the words from the array with a space delimeter
 };
 
 var render = function () {
-  var aAvailableWords = Session.get("aAvailableWords"),
+  var aAvailableWords = Session.get('aAvailableWords'),
     nWidth;
 
   //no need to do anything if we have no cards
@@ -20,14 +20,14 @@ var render = function () {
   //get width of single word card and multiply it by total word cards
   nWidth = $('#wordOverflow .wordCard:first').outerWidth( true ) * aAvailableWords.length;
   //set our container div to that width so that it scrolls horizontally inside #wordContainer
-  $('#wordOverflow').css('width', nWidth + "px");
+  $('#wordOverflow').css('width', nWidth + 'px');
 };
 
 Template.build.events({
 
   //-------------BEGIN FORM CHANGE EVENTS-----------------
   'change #txtContent': function(evt){
-    Session.set("sContent", evt.target.value);
+    Session.set('sContent', evt.target.value);
   },
   'click #btnGetWord': function (evt) {
     //TODO: maybe save aAllWords to Session so we aren't re-querying this every time... but we also need to move this to only run on the server side since this needs to be secure
@@ -45,7 +45,7 @@ Template.build.events({
       if (aAvailableWords[i]._id === oNewWord._id){
         //it shouldn't happen too often that a user gets a card they already drew, so lets just return and pretend it didn't happen.
         //but we will log the event
-        console.log("drew same word card id", aAllWords.length, oNewWord._id);
+        console.log('drew same word card id', aAllWords.length, oNewWord._id);
         return;
       }
     }
@@ -59,14 +59,14 @@ Template.build.events({
   'click .btnAddWord': function (evt) {
     var sID = evt.target.id,
       sNewWord = sID.substr(11),//get the last part of the element's id, which corresponds to the word
-      aUsedWords = Session.get("aUsedWords");
+      aUsedWords = Session.get('aUsedWords');
 
     //TODO: find out if there's a better way to set Session default values
     if (!aUsedWords) {
       aUsedWords = [];
     }
     aUsedWords.push(sNewWord);//add to our list of words for this entry
-    Session.set("aUsedWords", aUsedWords);
+    Session.set('aUsedWords', aUsedWords);
   },
   //discard a word so that it's no longer available to use
   'click .btnDiscardWord': function(evt){
@@ -80,16 +80,16 @@ Template.build.events({
         aAvailableWords.splice(i, 1);
         //TODO: we need to do at least some of this on the server so that this is a secure action
         //I guess we'll need to be adding and removing these words from the user collection since each user should have his persistent hand of word cards
-        Session.set("aAvailableWords", aAvailableWords);
+        Session.set('aAvailableWords', aAvailableWords);
         return;
       }
     }
 
     //TODO: add logging and error handling features (splunk!)
-    console.log("Error!!!! it never found the word to delete!");
+    console.log('Error!!!! it never found the word to delete!');
   },
   'click #btnClearTitle': function (evt) {
-    Session.set("aUsedWords", []);
+    Session.set('aUsedWords', []);
   },
   //-------------END FORM CHANGE EVENTS-----------------
 
@@ -99,16 +99,16 @@ Template.build.events({
 
     //insert the new entry into the database, letting mongo create its _id
     colEntries.insert({
-      content: Session.get("sContent"),
+      content: Session.get('sContent'),
       title: getTitle(),
-      words: Session.get("aUsedWords"),
+      words: Session.get('aUsedWords'),
       dateAdded: new Date()
     });
 
     //clear the form values
     //TODO: don't do this until we confirm that we have successfully added on the backend
-    Session.set("sContent", "");
-    Session.set("aUsedWords", []);
+    Session.set('sContent', '');
+    Session.set('aUsedWords', []);
   }
 });
 
@@ -117,7 +117,7 @@ Template.build.helpers({
     return Session.get('aAvailableWords');
   },
   sContent: function () {
-    return Session.get("sContent");
+    return Session.get('sContent');
   },
   sTitle: getTitle
 });

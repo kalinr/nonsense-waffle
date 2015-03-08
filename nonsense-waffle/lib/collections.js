@@ -1,4 +1,4 @@
-//we can't "use strict" in this file; Not sure why, but if we do, it tries to force us to var colWords and colEntries, but if we do, they suddenly aren't accessible in other places
+//we can't 'use strict' in this file; Not sure why, but if we do, it tries to force us to var colWords and colEntries, but if we do, they suddenly aren't accessible in other places
 
 /*
 Lists = new Meteor.Collection('lists');
