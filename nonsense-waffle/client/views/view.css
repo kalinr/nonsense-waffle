@@ -11,3 +11,9 @@
   cursor: pointer;//TODO: check if we need both of these (apparently browsers are inconsistent here)
   cursor: hand;
 }
+
+#btnMute {
+  position: absolute;
+  left: 500px;
+  top: 40px;
+}

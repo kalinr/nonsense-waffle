@@ -9,5 +9,11 @@
   in admin page; made build page word list do an infinite horizontal scroll within its container; changed the getting of the word cards to getting
   a single randomized card with each button click; added working discard button to each card; cleaned up the view a little bit (the view view if you will)
   and split the stylesheet out into view.css and build.css
-3-7-2015          added render function to build.js so that it gets called when a card is drawn and when the page first renders so that the
-  cards always get properly floated to the right; made the entry content field expand to %100 so that its width doesn't screw up the build page on mobile devices;
+3-7-2015 - 5hrs - added render function to build.js so that it gets called when a card is drawn and when the page first renders so that the
+  cards always get properly floated to the right; made the entry content field expand to 100% so that its width doesn't screw up the build page on mobile devices;
+  tried to get a testing framework running but nothing seems to work on windows
+3-22-2015 - 5hrs - figured out how to create meteor packages in windows, got a basic speechManager package working with feature checking,
+  enable/disable (including saving to localStorage) and speech output abilities for text-to-speech. Got this plugged into the view page
+  so that it's speaking the waffles you click on and muting/unmuting via a new button. Also added startup.js class to init the speechmanager,
+  and moved all the css into the views folder, since I just find it easier to navigate this way. I prefer to organize based on what it's doing
+  in the app rather than by file extension.

@@ -1,4 +1,15 @@
 <template name='view'>
+
+  {{#if speechSupported}}
+    <button id="btnMute">
+      {{#if speechEnabled}}
+        Mute
+      {{else}}
+        Un-Mute
+      {{/if}}
+    </button>
+  {{/if}}
+
   <h2>{{oEntry.title}}</h2>
   <p>{{oEntry.content}}</p>
 

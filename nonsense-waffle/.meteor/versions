@@ -47,6 +47,7 @@ routepolicy@1.0.4-winr.4
 session@1.0.6-winr.2
 spacebars@1.0.5-winr.5
 spacebars-compiler@1.0.5-winr.2
+speechmanager@0.0.1
 templating@1.0.11-winr.6
 tracker@1.0.5-winr.4
 ui@1.0.6-winr.2
