@@ -1,7 +1,7 @@
 "use strict";
 
 SpeechManager = {
-  oSpeechUtterance: null,
+  aUtterances: null,
   bSpeechEnabled: false,
   bSpeechSupported: false,
   bListenSupported: false,
@@ -9,7 +9,6 @@ SpeechManager = {
   init: function () {
     //TODO: make these if statements jslint compatible
     if ('speechSynthesis' in window) {//this browser can talk
-      this.oSpeechUtterance = new SpeechSynthesisUtterance();
       this.bSpeechSupported = true;
 
       //we blindly assume that if speechsynthesis is available, this browser must also have localStorage
@@ -27,10 +26,20 @@ SpeechManager = {
   },
 
   speak: function (msg) {
+    var i;
+
     if (this.bSpeechEnabled && this.bSpeechSupported) {
+      this.aUtterances = [];
       speechSynthesis.cancel();//cancel anything that was playing previously
-      this.oSpeechUtterance.text = msg;
-      speechSynthesis.speak(this.oSpeechUtterance);
+
+      //this deals with a bug in google chrome where it can't speak long texts in one shot, so we break the string into sentences
+      //TODO: deal with situations where a single sentence is more than 160 or so characters
+      var sentences = msg.split(". ");
+      for (i = 0; i < sentences.length; i++) {
+        this.aUtterances[i] = new SpeechSynthesisUtterance();
+        this.aUtterances[i].text = sentences[i];
+        speechSynthesis.speak(this.aUtterances[i]);
+      }
     }
   },
 
