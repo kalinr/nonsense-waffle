@@ -1,7 +1,7 @@
 "use strict";
 
 SpeechManager = {
-  aUtterances: null,
+  aUtterances: [],
   bSpeechEnabled: false,
   bSpeechSupported: false,
   bListenSupported: false,
@@ -26,15 +26,23 @@ SpeechManager = {
   },
 
   speak: function (msg) {
-    var i;
+    var elTemp,
+      sentences,
+      i;
 
     if (this.bSpeechEnabled && this.bSpeechSupported) {
+
+      //get the browser to strip out all the html from the msg
+      elTemp = document.createElement("DIV");
+      elTemp.innerHTML = msg;
+      msg = elTemp.textContent || elTemp.innerText || "";
+
       this.aUtterances = [];
       speechSynthesis.cancel();//cancel anything that was playing previously
 
       //this deals with a bug in google chrome where it can't speak long texts in one shot, so we break the string into sentences
       //TODO: deal with situations where a single sentence is more than 160 or so characters
-      var sentences = msg.split(". ");
+      sentences = msg.split(". ");
       for (i = 0; i < sentences.length; i++) {
         this.aUtterances[i] = new SpeechSynthesisUtterance();
         this.aUtterances[i].text = sentences[i];
