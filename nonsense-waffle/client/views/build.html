@@ -7,8 +7,8 @@
           <div class='wordCardTitle' >{{_id}}</div> {{description}} <br> {{type}}
           <br>
           <div class='wordCardButtons'>
-            <button class='btnDiscardWord' id='btnDiscardWord_{{_id}}'>Discard</button>
-            <button class='btnAddWord' id='btnAddWord_{{_id}}'>Add</button>
+            <button class='btnDiscardWord js-btnDiscardWord' id='btnDiscardWord_{{_id}}'>Discard</button>
+            <button class='btnAddWord js-btnAddWord' id='btnAddWord_{{_id}}'>Add</button>
           </div>
         </div>
       {{/each}}
@@ -17,11 +17,11 @@
 
   <button id='btnGetWord'>Draw Card</button>
 
-  <div  id='buildForm'>
+  <div id='buildForm'>
     title: {{sTitle}} <button id='btnClearTitle'>clear</button>
     <form>
       <br>
-      <textarea class='fullWidth' id='txtContent' rows='5' placeholder='type your crap here'>{{sContent}}</textarea>
+      <textarea class='js-buildTextarea fullWidth' id='txtContent' rows='5' placeholder='type your crap here'></textarea>
       <br><br>
 
       <button id='btnSubmitEntry'>submit entry</button>

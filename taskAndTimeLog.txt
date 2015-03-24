@@ -17,3 +17,7 @@
   so that it's speaking the waffles you click on and muting/unmuting via a new button. Also added startup.js class to init the speechmanager,
   and moved all the css into the views folder, since I just find it easier to navigate this way. I prefer to organize based on what it's doing
   in the app rather than by file extension.
+3-23-2015 - 7hrs - fixed the chrome text-to-speech issue by breaking text into sentences... though it will still fail for long sentences. Turned a couple
+  classes into js- prefixed classes for specific use by javaScript. Added tinymce (loading from cdn because I couldn't get it to work when loading it from
+  local) and got the buttons set up the way I think I want it, and got it saving the html to the collection, and saving its state through the session. Still
+  need to fix the speech so that it doesn't read out the html tags.

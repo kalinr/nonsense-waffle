@@ -11,10 +11,10 @@
   {{/if}}
 
   <h2>{{oEntry.title}}</h2>
-  <p>{{oEntry.content}}</p>
+  <div>{{{oEntry.content}}}</div>
 
   {{#each entries}}
-    <div class='entryCard' entryid='{{_id}}'>
+    <div class='entryCard js-entryCard' entryid='{{_id}}'>
       {{title}}
     </div>
   {{/each}}

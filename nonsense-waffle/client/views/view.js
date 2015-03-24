@@ -1,7 +1,7 @@
 'use strict';
 
 Template.view.events({
-  'click .entryCard': function (evt) {
+  'click .js-entryCard': function (evt) {
     var path = Router.current().url,
       oEntry;//get the current url
     path = path.substr(0, path.indexOf('/view') + 5 );//strip it down to domain/view if we're already on an entry

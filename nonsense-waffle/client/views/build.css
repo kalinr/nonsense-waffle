@@ -19,6 +19,10 @@
   margin: 10px;
 }
 
+#txtContent {
+  height: 250px;
+}
+
 .wordCard {
   position: relative;
   border: solid;

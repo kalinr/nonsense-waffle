@@ -2,7 +2,7 @@ Package.describe({
   name: 'speechmanager',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'A simple manager class for speech-to-text and text-to-speech functionality, supported in Chrome, Safari and iOS',
   // URL to the Git repository containing the source code for this package.
   git: '',
   // By default, Meteor will default to using README.md for documentation.
