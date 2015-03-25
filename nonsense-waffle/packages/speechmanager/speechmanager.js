@@ -5,6 +5,7 @@ SpeechManager = {
   bSpeechEnabled: false,
   bSpeechSupported: false,
   bListenSupported: false,
+  oTriggers: [],//associative array (eventName:callback)
 
   init: function () {
     //TODO: make these if statements jslint compatible
@@ -28,7 +29,8 @@ SpeechManager = {
   speak: function (msg) {
     var elTemp,
       sentences,
-      i;
+      i,
+      self = this;
 
     if (this.bSpeechEnabled && this.bSpeechSupported) {
 
@@ -48,10 +50,40 @@ SpeechManager = {
         this.aUtterances[i].text = sentences[i];
         speechSynthesis.speak(this.aUtterances[i]);
       }
+
+      //listen to the end of only the final utterance so we know when they are all done
+      this.aUtterances[this.aUtterances.length - 1].onend = function () {
+        self.stop();
+      };
+
     }
   },
 
-  saveState: function (){
+  //stop any speech currently happening
+  stop: function () {
+    speechSynthesis.cancel();
+    this.trigger('speechStopped');
+  },
+
+  //add an event listener
+  on: function(event, callback) {
+    if (!this.oTriggers[event]) {
+      this.oTriggers[event] = [];
+    }
+    this.oTriggers[event].push(callback);
+  },
+
+  //trigger an event
+  trigger: function(event, params) {
+    var i;
+    if (this.oTriggers[event]) {
+      for (i in this.oTriggers[event] ) {
+        this.oTriggers[event][i](params);
+      }
+    }
+  },
+
+  saveState: function () {
     if (Storage !== undefined) {
       localStorage.setItem('bSpeechEnabled', this.bSpeechEnabled);
     }

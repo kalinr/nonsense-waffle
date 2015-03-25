@@ -134,11 +134,14 @@ Template.build.rendered = function () {
 
   if (!bInitialized) {
     //configure the tinymce instance. Only need to do this once so we check bInitialized
+
+    tinymceTextToSpeechInit();
+
     tinymce.init({
       mode: "specific_textareas",
       editor_selector: "js-buildTextarea",
-      plugins: "advlist, autolink, charmap, colorpicker, emoticons, fullscreen, hr, insertdatetime, link, paste, preview, searchreplace, spellchecker, table, textcolor, wordcount",
-      toolbar: "undo redo | styleselect fontselect fontsizeselect | bold italic underline | alignleft aligncenter alignright alignjustify | forecolor backcolor | bullist numlist outdent indent | link | emoticons | fullscreen",
+      plugins: "advlist, autolink, charmap, colorpicker, emoticons, fullscreen, hr, insertdatetime, link, paste, preview, searchreplace, spellchecker, table, textcolor, wordcount, textToSpeech",
+      toolbar: "undo redo | styleselect fontselect fontsizeselect | bold italic underline | alignleft aligncenter alignright alignjustify | forecolor backcolor | removeformat | bullist numlist outdent indent | link | emoticons | fullscreen | textToSpeech",
       setup: function (editor) {
         editor.on('change', onContentChange);
       }

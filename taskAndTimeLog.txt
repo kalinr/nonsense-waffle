@@ -21,3 +21,5 @@
   classes into js- prefixed classes for specific use by javaScript. Added tinymce (loading from cdn because I couldn't get it to work when loading it from
   local) and got the buttons set up the way I think I want it, and got it saving the html to the collection, and saving its state through the session. Still
   need to fix the speech so that it doesn't read out the html tags.
+3-24-2015 - 0.5hrs - fixed the issue where the screenreader was reading all the html tags.
+3-25-2015 - 3hrs - 
