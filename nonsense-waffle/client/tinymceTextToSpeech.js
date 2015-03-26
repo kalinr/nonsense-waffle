@@ -63,7 +63,7 @@ tinymceTextToSpeechInit = function () {
 
     var bCurrentlyListening = false;
 
-    SpeechManager.on('speechStopped', function () {
+    SpeechManager.on('listeningStopped', function () {
       bCurrentlyListening = false;
       editor.fire('ListenToMeStateChanged', {state: false});
     });
@@ -76,7 +76,9 @@ tinymceTextToSpeechInit = function () {
       } else {
         //SpeechManager.speak(tinymce.activeEditor.getContent());
         console.log("inserting text!!!");
-        tinyMCE.execCommand('mceInsertContent',false, 'blabla this is tekst');
+        //tinyMCE.execCommand('mceInsertContent',false, 'blabla this is tekst');
+
+        SpeechManager.listen();
       }
 
       bCurrentlyListening = !bCurrentlyListening;
@@ -89,7 +91,7 @@ tinymceTextToSpeechInit = function () {
     //Set up the button in the toolbar
     editor.addButton('speechtotext', {
       text: 'Listen',
-      tooltip: 'Read aloud your current content',
+      tooltip: 'Talk to add text. Make sure your mic is on and click the "allow" button at the top of the browser.',
       icon: false, //icon: 'my_icon',
       onclick: listenToMe,
 

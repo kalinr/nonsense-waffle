@@ -34,7 +34,7 @@ SpeechManager = {
       this.oSpeechRecognition.continuous = true;
       this.oSpeechRecognition.interimResults = true;
       this.oSpeechRecognition.onresult = function(event) {
-        console.log(event)
+        console.log("speechrecog event", event)
       }
 
       console.log(this.oSpeechRecognition);
@@ -90,6 +90,9 @@ SpeechManager = {
   },
 
   stopListening: function () {
+
+    console.log(this.oSpeechRecognition.stop);
+
     this.oSpeechRecognition.stop();
   },
 
