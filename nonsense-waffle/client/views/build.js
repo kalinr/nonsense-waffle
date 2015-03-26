@@ -140,8 +140,8 @@ Template.build.rendered = function () {
     tinymce.init({
       mode: "specific_textareas",
       editor_selector: "js-buildTextarea",
-      plugins: "advlist, autolink, charmap, colorpicker, emoticons, fullscreen, hr, insertdatetime, link, paste, preview, searchreplace, spellchecker, table, textcolor, wordcount, textToSpeech",
-      toolbar: "undo redo | styleselect fontselect fontsizeselect | bold italic underline | alignleft aligncenter alignright alignjustify | forecolor backcolor | removeformat | bullist numlist outdent indent | link | emoticons | fullscreen | textToSpeech",
+      plugins: "advlist, autolink, charmap, colorpicker, emoticons, fullscreen, hr, insertdatetime, link, paste, preview, searchreplace, spellchecker, table, textcolor, wordcount, texttospeech, speechtotext",
+      toolbar: "undo redo | styleselect fontselect fontsizeselect | bold italic underline | alignleft aligncenter alignright alignjustify | forecolor backcolor | removeformat | bullist numlist outdent indent | link | emoticons | fullscreen | texttospeech speechtotext",
       setup: function (editor) {
         editor.on('change', onContentChange);
       }

@@ -4,7 +4,10 @@ SpeechManager = {
   aUtterances: [],
   bSpeechEnabled: false,
   bSpeechSupported: false,
+  bSpeaking: false,
   bListenSupported: false,
+  bListening: false,
+  oSpeechRecognition: null,
   oTriggers: [],//associative array (eventName:callback)
 
   init: function () {
@@ -21,8 +24,20 @@ SpeechManager = {
       }
     }
 
-    if ('SpeechRecognition' in window) {//this browser can listen
+    if ('webkitSpeechRecognition' in window) {//this browser can listen
       this.bListenSupported = true;
+
+      console.log("speechsupported!!!!!");
+
+
+      this.oSpeechRecognition = new webkitSpeechRecognition();
+      this.oSpeechRecognition.continuous = true;
+      this.oSpeechRecognition.interimResults = true;
+      this.oSpeechRecognition.onresult = function(event) {
+        console.log(event)
+      }
+
+      console.log(this.oSpeechRecognition);
     }
   },
 
@@ -33,6 +48,8 @@ SpeechManager = {
       self = this;
 
     if (this.bSpeechEnabled && this.bSpeechSupported) {
+
+      this.bSpeaking = true;
 
       //get the browser to strip out all the html from the msg
       elTemp = document.createElement("DIV");
@@ -53,16 +70,27 @@ SpeechManager = {
 
       //listen to the end of only the final utterance so we know when they are all done
       this.aUtterances[this.aUtterances.length - 1].onend = function () {
-        self.stop();
+        self.stopSpeaking();
       };
-
     }
   },
 
   //stop any speech currently happening
-  stop: function () {
+  stopSpeaking: function () {
     speechSynthesis.cancel();
+    this.bSpeaking = false;
     this.trigger('speechStopped');
+  },
+
+  listen: function () {
+
+    console.log("starting to listen!!!");
+
+    this.oSpeechRecognition.start();
+  },
+
+  stopListening: function () {
+    this.oSpeechRecognition.stop();
   },
 
   //add an event listener
