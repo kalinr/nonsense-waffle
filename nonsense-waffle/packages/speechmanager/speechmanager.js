@@ -11,12 +11,15 @@ SpeechManager = {
   oTriggers: [],//associative array (eventName:callback)
 
   init: function () {
+    var bSpeechEnabledSaved,
+      self = this;
+
     //TODO: make these if statements jslint compatible
     if ('speechSynthesis' in window) {//this browser can talk
       this.bSpeechSupported = true;
 
       //we blindly assume that if speechsynthesis is available, this browser must also have localStorage
-      var bSpeechEnabledSaved = JSON.parse(localStorage.getItem('bSpeechEnabled'));
+      bSpeechEnabledSaved = JSON.parse(localStorage.getItem('bSpeechEnabled'));
 
       if (bSpeechEnabledSaved || bSpeechEnabledSaved === null || bSpeechEnabledSaved === undefined) {
         //if the stored value was true or if there was no stored value, default speech enabled to true
@@ -31,7 +34,9 @@ SpeechManager = {
       this.oSpeechRecognition.continuous = true;
       this.oSpeechRecognition.interimResults = true;
 
-      this.oSpeechRecognition.onresult = this.onListenResult;
+      this.oSpeechRecognition.onresult = function(evt){
+        self.onListenResult(evt);
+      }
 
       console.log(this.oSpeechRecognition);
     }
@@ -89,6 +94,9 @@ SpeechManager = {
   //-----------------------Begin Listen functions--------------------------------
   listen: function () {
     this.stopSpeaking();
+
+    console.log("startListening!!!!");
+
     this.oSpeechRecognition.start();
   },
 
@@ -105,17 +113,22 @@ SpeechManager = {
       //take only the first option from each result as that is supposed to be the most likely to be correct
       sNewText += evt.results[i][0].transcript;
 
-      //if anything is considered final, set it as final (I have no idea if this is necessary because if it's final
-      //it should just give one result, but I'm not sure if that will always be the case)
-      if (evt.results[i][0].isFinal) {
+      console.log(evt.results[i][0]);
+      //if anything is considered final, set it as final
+      if (evt.results[i].isFinal) {
+
+        console.log("isfinal ture");
         isFinal = true;
       }
     }
+
+
     this.trigger('listenResult', {sNewText: sNewText, isFinal: isFinal});
 
     //once isFinal is true, Google Chrome just stops accepting voice input so we have no choice but to abandon ship
     //the user has to stop talking for a few seconds to get it to send isFinal as true
     if (isFinal) {
+      console.log("stopping listening");
       this.stopListening();
     }
   },
@@ -123,6 +136,7 @@ SpeechManager = {
   stopListening: function () {
     this.oSpeechRecognition.stop();
     this.bSpeaking = false;
+    console.log("triggering listeningStopped");
     this.trigger('listeningStopped');
   },
   //-----------------------End listening functions--------------------------------
