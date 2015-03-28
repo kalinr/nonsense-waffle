@@ -37,8 +37,6 @@ SpeechManager = {
       this.oSpeechRecognition.onresult = function(evt){
         self.onListenResult(evt);
       }
-
-      console.log(this.oSpeechRecognition);
     }
   },
 
@@ -94,9 +92,6 @@ SpeechManager = {
   //-----------------------Begin Listen functions--------------------------------
   listen: function () {
     this.stopSpeaking();
-
-    console.log("startListening!!!!");
-
     this.oSpeechRecognition.start();
   },
 
@@ -105,19 +100,14 @@ SpeechManager = {
       sNewText = "",
       isFinal = false;
 
-    console.log(evt);
-
     //loop through all results and concatenate them together (usually there's only one but if the API is sure about
     //the first one and still thinking about the second one, it gives us a second so we add that to the string
     for (i = 0; i < evt.results.length; i++) {
       //take only the first option from each result as that is supposed to be the most likely to be correct
       sNewText += evt.results[i][0].transcript;
 
-      console.log(evt.results[i][0]);
       //if anything is considered final, set it as final
       if (evt.results[i].isFinal) {
-
-        console.log("isfinal ture");
         isFinal = true;
       }
     }
@@ -128,7 +118,6 @@ SpeechManager = {
     //once isFinal is true, Google Chrome just stops accepting voice input so we have no choice but to abandon ship
     //the user has to stop talking for a few seconds to get it to send isFinal as true
     if (isFinal) {
-      console.log("stopping listening");
       this.stopListening();
     }
   },
@@ -136,7 +125,6 @@ SpeechManager = {
   stopListening: function () {
     this.oSpeechRecognition.stop();
     this.bSpeaking = false;
-    console.log("triggering listeningStopped");
     this.trigger('listeningStopped');
   },
   //-----------------------End listening functions--------------------------------

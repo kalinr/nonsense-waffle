@@ -30,8 +30,6 @@ id= 21003 *+2011-09-17 18:21:01 *+Often involves an odor. *+Slimy *+
 
 id= 22002 *+2011-09-17 17:58:41 *+You're just not sure if it's gonna work. *+Experimental *+
 
-id= 22004 *+2011-09-17 18:17:47 *+Way out of your price range. *+Expensive *+
-
 id= 23001 *+2011-09-17 17:58:08 *+It's stinky. *+Smelly *+
 
 id= 23002 *+2011-09-17 18:16:08 *+It can get bigger and bigger. *+Expandable *+

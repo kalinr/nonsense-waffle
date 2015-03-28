@@ -82,7 +82,6 @@ tinymceTextToSpeechInit = function () {
           if (aCurContent.length !== 1) {
             throw new Error("Somehow we got the wrong number of <!--speech--> tags");
           }
-          console.log("inserting!!!!!!!!");
           tinymce.execCommand('mceInsertContent', false, '<!--speech-->' + evt.sNewText + '<!--speech-->');
         }
 
@@ -96,7 +95,6 @@ tinymceTextToSpeechInit = function () {
 
       SpeechManager.on('listeningStopped', function (evt) {
         bCurrentlyListening = false;
-        console.log("calling listetomestatechanged false");
         editor.fire('ListenToMeStateChanged', {state: false});
       });
 
