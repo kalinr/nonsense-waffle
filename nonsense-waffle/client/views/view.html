@@ -10,13 +10,13 @@
     </button>
   {{/if}}
 
-  <h2>{{oEntry.title}}</h2>
-  <div>{{{oEntry.content}}}</div>
-
-  {{#each entries}}
-    <div class='entryCard js-entryCard' entryid='{{_id}}'>
-      {{title}}
-    </div>
-  {{/each}}
-
+  <section id="mainContainer" class="center">
+    <h2>{{oEntry.title}}</h2>
+    <article>{{{oEntry.content}}}</article>
+    {{#each entries}}
+      <div class='entryCard js-entryCard' entryid='{{_id}}'>
+        {{title}}
+      </div>
+    {{/each}}
+  </section>
 </template>

@@ -1,5 +1,31 @@
 'use strict';
 
+var centerListItems = function () {
+  var nPageWidth = $('body').innerWidth(),//total width of page
+    nItemWidth = $('.js-entryCard').filter(':first').outerWidth(true),//total width of each item (true param makes it include margins)
+    nNewWidth = Math.floor(nPageWidth / nItemWidth) * nItemWidth;
+  $('#mainContainer').width(nNewWidth);
+};
+
+var sEventName;
+
+//if we're on mobile, listen to onorientationchange. Otherwise, we can listen to resize
+if ('onorientationchange' in window) {
+  sEventName = 'onorientationchange';
+} else {
+  sEventName = 'resize';
+}
+
+$(window)
+  .off(sEventName)
+  .on(sEventName, _.debounce(function () {//call centerListItems() 350 milliseconds after the last size event
+    centerListItems();
+  }, 350));
+
+Template.view.rendered = function () {
+  centerListItems();
+}
+
 Template.view.events({
   'click .js-entryCard': function (evt) {
     var path = Router.current().url,

@@ -1,10 +1,9 @@
 .entryCard {
-  position: relative;
   border: solid;
   border-color: #299679;
   width: 130px;
   float: left;
-  height:80px;
+  height: 80px;
   margin: 5px 3px;
   text-align: center;
   border-radius: 4px;
@@ -13,7 +12,21 @@
 }
 
 #btnMute {
-  position: absolute;
-  left: 500px;
-  top: 40px;
+  position: relative;
+  top: -40px;
+  left: 200px;
+}
+
+#mainContainer h2, article {
+  margin-left: 5px;
+}
+
+#mainContainer article {
+  margin-bottom: 15px;
+}
+
+/*TODO: move this into a global file?*/
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }
