@@ -1,9 +1,12 @@
 'use strict';
 
+//KLUDGE: this really should be done with pure CSS, but nothing worked to "shrink wrap" these items
 var centerListItems = function () {
   var nPageWidth = $('body').innerWidth(),//total width of page
-    nItemWidth = $('.js-entryCard').filter(':first').outerWidth(true),//total width of each item (true param makes it include margins)
+    //total width of each item (true param makes it include margins). Start with 142 in case data isn't loaded yet.
+    nItemWidth = $('.js-entryCard').filter(':first').outerWidth(true) || 142,
     nNewWidth = Math.floor(nPageWidth / nItemWidth) * nItemWidth;
+
   $('#mainContainer').width(nNewWidth);
 };
 
@@ -11,7 +14,7 @@ var sEventName;
 
 //if we're on mobile, listen to onorientationchange. Otherwise, we can listen to resize
 if ('onorientationchange' in window) {
-  sEventName = 'onorientationchange';
+  sEventName = 'orientationchange';
 } else {
   sEventName = 'resize';
 }
@@ -57,10 +60,6 @@ Template.view.helpers({
     return Session.get('speechEnabled');
   },
   speechSupported: function () {
-    SpeechManager.init
     return Session.get('speechSupported');
   }
 });
-
-
-

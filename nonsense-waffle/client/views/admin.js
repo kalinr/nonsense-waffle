@@ -31,13 +31,7 @@ Template.admin.events({
   'submit #formNewWord': function (evt) {
     evt.preventDefault();
 
-    //insert the new word into the database, using the word itself as its unique ID
-    colWords.insert({
-      _id: Session.get('sNewWord'),
-      description: Session.get('sDescription'),
-      type: Session.get('sType'),
-      dateAdded: new Date()
-    });
+    Meteor.call("insertWord", Session.get('sNewWord'), Session.get('sDescription'), Session.get('sType'));
 
     Session.set('sType', '');
     Session.set('sDescription', '');
@@ -98,7 +92,8 @@ Template.admin.events({
         aDocuments[nCount]._id = aWords[i];
 
         //not sure why inserting the whole array at once is not working so we just do it on this loop instead
-        colWords.insert(aDocuments[nCount]);
+        Meteor.call("insertWord", aDocuments[nCount]._id, aDocuments[nCount].description, aDocuments[nCount].type);
+
         nCount++;
         break;
       }

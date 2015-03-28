@@ -112,7 +112,6 @@ SpeechManager = {
       }
     }
 
-
     this.trigger('listenResult', {sNewText: sNewText, isFinal: isFinal});
 
     //once isFinal is true, Google Chrome just stops accepting voice input so we have no choice but to abandon ship
@@ -131,19 +130,19 @@ SpeechManager = {
 
   //-----------------------Begin event handling--------------------------------
   //add an event listener
-  on: function(event, callback) {
-    if (!this.oTriggers[event]) {
-      this.oTriggers[event] = [];
+  on: function (sEvent, fCallback) {
+    if (!this.oTriggers[sEvent]) {
+      this.oTriggers[sEvent] = [];
     }
-    this.oTriggers[event].push(callback);
+    this.oTriggers[sEvent].push(fCallback);
   },
 
   //trigger an event
-  trigger: function(event, params) {
+  trigger: function(sEvent, oParams) {
     var i;
-    if (this.oTriggers[event]) {
-      for (i in this.oTriggers[event] ) {
-        this.oTriggers[event][i](params);
+    if (this.oTriggers[sEvent]) {
+      for (i in this.oTriggers[sEvent] ) {
+        this.oTriggers[sEvent][i](oParams);
       }
     }
   },

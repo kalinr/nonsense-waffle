@@ -1,23 +1,33 @@
-//we can't 'use strict' in this file; Not sure why, but if we do, it tries to force us to var colWords and colEntries, but if we do, they suddenly aren't accessible in other places
+//we can put each collection in its own file, but until we reach 500 lines or so, it's easier to leave them in one
 
-/*
-Lists = new Meteor.Collection('lists');
+//TODO: rename 'entries' to 'waffles'
+colEntries = new Meteor.Collection('entries');
+Meteor.methods({
+  insertWaffle: function (sContent, sTitle, aWords) {
+    // Make sure the user is logged in before inserting a task
+    /*if (! Meteor.userId()) {
+      throw new Meteor.Error("not-authorized");
+    }*/
 
-
-// Calculate a default name for a list in the form of 'List A'
-Lists.defaultName = function() {
-  var nextLetter = 'A', nextName = 'List ' + nextLetter;
-  while (Lists.findOne({name: nextName})) {
-    // not going to be too smart here, can go past Z
-    nextLetter = String.fromCharCode(nextLetter.charCodeAt(0) + 1);
-    nextName = 'List ' + nextLetter;
+    colEntries.insert({
+      content: sContent,
+      title: sTitle,
+      words: aWords,
+      dateAdded: new Date()
+    });
   }
-
-  return nextName;
-};
-
-Todos = new Meteor.Collection('todos');
-*/
+});
 
 colWords = new Meteor.Collection('words');
-colEntries = new Meteor.Collection('entries');
+Meteor.methods({
+  insertWord: function (sNewWord, sDescription, sType) {
+    //TODO: add security when we implement user accounts, verifying admin permissions
+    //insert the new word into the database, using the word itself as its unique ID
+    colWords.insert({
+      _id: sNewWord,
+      description: sDescription,
+      type: sType,
+      dateAdded: new Date()
+    });
+  }
+});

@@ -23,3 +23,9 @@
   need to fix the speech so that it doesn't read out the html tags.
 3-24-2015 - 0.5hrs - fixed the issue where the screenreader was reading all the html tags.
 3-25-2015 - 3hrs - built tinymce speech plugin with functional textToSpeech button and menu item.
+3-27-2015 - 4hrs - centered the main content of the view page using orientation and resize event listeners. Way more complex than it should have been.
+  also did a little more code cleanup
+3-28-2015 - 3hrs - fixed up the item centering in android (the stackoverflow thread I referenced had the wrong name for the orientationchange) and also added
+  a default width value for the items since when it's on a real server the render function happens before the data is available. There should be a better way, like a 'renderComplete' function
+  or something. Also moved the collection update functionality into collection.js methods which will ultimately have user account and removed insecure package.
+  security.

@@ -73,7 +73,7 @@ Template.build.events({
   },
 
   //discard a word so that it's no longer available to use
-  'click .js-btnDiscardWord': function(evt){
+  'click .js-btnDiscardWord': function (evt) {
     var sID = evt.target.id,
       sDiscardWord = sID.substr(15),//get the last part of the element's id, which corresponds to the word
       aAvailableWords = Session.get('aAvailableWords'),
@@ -102,13 +102,7 @@ Template.build.events({
   'submit form': function (evt) {
     evt.preventDefault();
 
-    //insert the new entry into the database, letting mongo create its _id
-    colEntries.insert({
-      content: Session.get('sContent'),
-      title: getTitle(),
-      words: Session.get('aUsedWords'),
-      dateAdded: new Date()
-    });
+    Meteor.call("insertWaffle", Session.get('sContent'), getTitle(), Session.get('aUsedWords'));
 
     //clear the form values
     //TODO: don't do this until we confirm that we have successfully added on the backend

@@ -40,8 +40,6 @@ id= 42002 *+2011-10-15 09:31:45 *+For like, the special olympics or something. *
 
 id= 42007 *+2011-10-15 10:11:07 *+To get better and better. *+Practicing *+
 
-id= 43002 *+2011-10-15 09:29:33 *+Crawling around in the dark and hiding in trees, just like your mom. *+Ninja *+
-
 id= 44005 *+2011-10-15 09:58:51 *+Like some kind of dead thing. *+Rotting *+
 
 id= 44006 *+2011-10-15 10:11:38 *+You do this in golf. *+Putting *+
