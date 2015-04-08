@@ -24,9 +24,3 @@
 #mainContainer article {
   margin-bottom: 15px;
 }
-
-/*TODO: move this into a global file?*/
-.center {
-  margin-left: auto;
-  margin-right: auto;
-}

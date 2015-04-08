@@ -1,6 +1,9 @@
 'use strict';
 var bInitialized = false;
 
+Meteor.subscribe("userWords");
+
+
 var getTitle = function () {
   var aUsedWords = Session.get('aUsedWords');
   if (!aUsedWords) {//if user hasn't selected any wordcards yet, display empty string
@@ -33,6 +36,7 @@ Template.build.events({
   //-------------BEGIN FORM CHANGE EVENTS-----------------
   'click #btnGetWord': function (evt) {
     //TODO: maybe save aAllWords to Session so we aren't re-querying this every time... but we also need to move this to only run on the server side since this needs to be secure
+
     var aAllWords = colWords.find().fetch(),
       oNewWord = aAllWords[_.random(0, aAllWords.length - 1)],
       aAvailableWords = Session.get('aAvailableWords'),

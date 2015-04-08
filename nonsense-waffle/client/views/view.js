@@ -1,5 +1,7 @@
 'use strict';
 
+Meteor.subscribe("colEntries");
+
 //KLUDGE: this really should be done with pure CSS, but nothing worked to "shrink wrap" these items
 var centerListItems = function () {
   var nPageWidth = $('body').innerWidth(),//total width of page
