@@ -13,7 +13,11 @@ var getTitle = function () {
 };
 
 var render = function () {
-  var aAvailableWords = Session.get('aAvailableWords'),
+  if(!Meteor.user()){
+    return;
+  }
+
+  var aAvailableWords = Meteor.user().profile.userWords,
     nWidth;
 
   //no need to do anything if we have no cards
@@ -36,30 +40,9 @@ Template.build.events({
   //-------------BEGIN FORM CHANGE EVENTS-----------------
   'click #btnGetWord': function (evt) {
     //TODO: maybe save aAllWords to Session so we aren't re-querying this every time... but we also need to move this to only run on the server side since this needs to be secure
-
-    var aAllWords = colWords.find().fetch(),
-      oNewWord = aAllWords[_.random(0, aAllWords.length - 1)],
-      aAvailableWords = Session.get('aAvailableWords'),
-      i;
-
-    if (!aAvailableWords) {
-      aAvailableWords = [];
-    }
-
-    //loop through all the words we already have in our personal list to see if this just happens to already be there
-    for (i = 0; i < aAvailableWords.length; i++) {
-      if (aAvailableWords[i]._id === oNewWord._id){
-        //it shouldn't happen too often that a user gets a card they already drew, so lets just return and pretend it didn't happen.
-        //but we will log the event
-        console.log('drew same word card id', aAllWords.length, oNewWord._id);
-        return;
-      }
-    }
-    //save the new word
-    aAvailableWords.push(oNewWord);
-    Session.set('aAvailableWords', aAvailableWords);
-
-    render();
+    Meteor.call("drawUserWord", function () {
+      render();
+    });
   },
 
   //add a word to your current creation's title
@@ -120,13 +103,18 @@ Template.build.events({
 
 Template.build.helpers({
   words: function () {//the word cards
-    return Session.get('aAvailableWords');
+    if (Meteor.user()) {
+
+      Meteor.defer(function () {
+        render();
+      });
+      return Meteor.user().profile.userWords;
+    }
   },
   sTitle: getTitle
 });
 
 Template.build.rendered = function () {
-
   //we must remove and then re-add the editor to make sure it appears again after leaving then coming back to this tab
   tinymce.EditorManager.execCommand('mceRemoveEditor', true, "txtContent");
 
@@ -138,7 +126,7 @@ Template.build.rendered = function () {
     tinymce.init({
       mode: "specific_textareas",
       editor_selector: "js-buildTextarea",
-      plugins: "advlist, autolink, charmap, colorpicker, emoticons, fullscreen, hr, insertdatetime, link, paste, preview, searchreplace, spellchecker, table, textcolor, wordcount, texttospeech, speechtotext",
+      plugins: "advlist, autolink, charmap, colorpicker, emoticons, fullscreen, hr, insertdatetime, link, paste, preview, searchreplace, spellchecker, table, textcolor, wordcount, texttospeech",
       toolbar: "undo redo | styleselect fontselect fontsizeselect | bold italic underline | alignleft aligncenter alignright alignjustify | forecolor backcolor | removeformat | bullist numlist outdent indent | link | emoticons | fullscreen | texttospeech speechtotext",
       setup: function (editor) {
         editor.on('change', onContentChange);

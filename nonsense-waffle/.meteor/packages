@@ -8,3 +8,8 @@ meteor-platform
 iron:router
 speechmanager
 random
+accounts-ui
+accounts-facebook
+accounts-google
+accounts-twitter
+accounts-password

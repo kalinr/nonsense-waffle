@@ -23,8 +23,9 @@
       <br>
       <textarea class='js-buildTextarea fullWidth' id='txtContent' rows='5' placeholder='type your crap here'></textarea>
       <br><br>
-
-      <button id='btnSubmitEntry'>submit entry</button>
+      {{#if currentUser}}
+        <button id='btnSubmitEntry'>submit entry</button>
+      {{/if}}
       <br>
     </form>
   </div>

@@ -29,3 +29,6 @@
   a default width value for the items since when it's on a real server the render function happens before the data is available. There should be a better way, like a 'renderComplete' function
   or something. Also moved the collection update functionality into collection.js methods which will ultimately have user account and removed insecure package.
   security.
+4-08-2015 - 5hrs - added publish and subscribe for my two collections and removed autopublish package. added login panel with facebook, google, twitter and standard (password) logins.
+  got the facebook one actually set up with app Id and everything. Changed word card drawing to happen in a server-side method. User words are now stored on the user profile object.
+  Fixed a bug where tinymce wasn't showing up in IE and firefox (browsers that don't support speech), by adding empty speech plugins for those browsers.

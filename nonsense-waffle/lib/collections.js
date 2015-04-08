@@ -13,7 +13,9 @@ Meteor.methods({
       content: sContent,
       title: sTitle,
       words: aWords,
-      dateAdded: new Date()
+      dateAdded: new Date(),
+      createUserID: Meteor.userId(),
+      createUsername: Meteor.user().profile.name
     });
   }
 });

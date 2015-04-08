@@ -59,6 +59,9 @@ tinymceTextToSpeechInit = function () {
 
       });
     });
+  } else {
+    //if not supported, add a plugin that does absolutely nothing
+    tinymce.PluginManager.add('texttospeech', function (editor, url) {    });
   }
 
   if (SpeechManager.bListenSupported) {
@@ -144,5 +147,8 @@ tinymceTextToSpeechInit = function () {
 
       });
     });
+  } else {
+    //if not supported, add a plugin that does absolutely nothing
+    tinymce.PluginManager.add('speechtotext', function (editor, url) {    });
   }
 }
